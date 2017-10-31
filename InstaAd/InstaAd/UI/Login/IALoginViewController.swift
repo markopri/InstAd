@@ -8,10 +8,38 @@
 import UIKit
 
 class IALoginViewController: UIViewController {
-
+    
+    @IBOutlet var txtUsername: UITextField!
+    @IBOutlet var txtPassword: UITextField!
+    
+    @IBAction func btnLogin(_ sender: Any) {
+        
+        if (txtUsername.text?.isEmpty)!||(txtPassword.text?.isEmpty)!{
+            
+            showAlert()
+            
+        }else{
+            
+            //TODO login
+            
+            
+        }
+        
+        
+        
+    }
+    
+    func showAlert() {
+        let alertController = UIAlertController(title: "Error", message: "Enter both username and password", preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.orange;
         // Do any additional setup after loading the view.
     }
 
