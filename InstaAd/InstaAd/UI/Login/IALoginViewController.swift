@@ -25,8 +25,6 @@ class IALoginViewController: UIViewController {
             
         }
         
-        
-        
     }
     
     func showAlert() {
