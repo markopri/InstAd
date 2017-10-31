@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A91FCE737FC02645DF11C52 /* Pods_InstaAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2442D8F6C59D4C601CA39EC7 /* Pods_InstaAd.framework */; };
 		FF0A66DB1FA7CB1C00F0392E /* IARegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A66D91FA7CB1C00F0392E /* IARegistrationViewController.swift */; };
 		FF0A66DC1FA7CB1C00F0392E /* IARegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0A66DA1FA7CB1C00F0392E /* IARegistrationViewController.xib */; };
 		FF0A66DF1FA7CB3E00F0392E /* IALoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A66DD1FA7CB3E00F0392E /* IALoginViewController.swift */; };
 		FF0A66E01FA7CB3E00F0392E /* IALoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0A66DE1FA7CB3E00F0392E /* IALoginViewController.xib */; };
+		FF0A66EA1FA8F9A300F0392E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF0A66E91FA8F9A200F0392E /* GoogleService-Info.plist */; };
 		FFC9B6CD1FA2297100B78F9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9B6CC1FA2297100B78F9B /* AppDelegate.swift */; };
 		FFC9B6D61FA2297100B78F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC9B6D51FA2297100B78F9B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B340A403BB323D82783D97B /* Pods-InstaAd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaAd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaAd/Pods-InstaAd.debug.xcconfig"; sourceTree = "<group>"; };
+		1F5E4B1710459467ED17A589 /* Pods-InstaAd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaAd.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaAd/Pods-InstaAd.release.xcconfig"; sourceTree = "<group>"; };
+		2442D8F6C59D4C601CA39EC7 /* Pods_InstaAd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaAd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0A66D91FA7CB1C00F0392E /* IARegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IARegistrationViewController.swift; sourceTree = "<group>"; };
 		FF0A66DA1FA7CB1C00F0392E /* IARegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IARegistrationViewController.xib; sourceTree = "<group>"; };
 		FF0A66DD1FA7CB3E00F0392E /* IALoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IALoginViewController.swift; sourceTree = "<group>"; };
 		FF0A66DE1FA7CB3E00F0392E /* IALoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IALoginViewController.xib; sourceTree = "<group>"; };
+		FF0A66E91FA8F9A200F0392E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFC9B6C91FA2297100B78F9B /* InstaAd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaAd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC9B6CC1FA2297100B78F9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC9B6D51FA2297100B78F9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,12 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A91FCE737FC02645DF11C52 /* Pods_InstaAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86D7C1C3573516DE9D8869E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2442D8F6C59D4C601CA39EC7 /* Pods_InstaAd.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2D729233C6F6BABD8A01BE7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B340A403BB323D82783D97B /* Pods-InstaAd.debug.xcconfig */,
+				1F5E4B1710459467ED17A589 /* Pods-InstaAd.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FF0A66D61FA7CACF00F0392E /* Registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +84,8 @@
 			children = (
 				FFC9B6CB1FA2297100B78F9B /* InstaAd */,
 				FFC9B6CA1FA2297100B78F9B /* Products */,
+				D2D729233C6F6BABD8A01BE7 /* Pods */,
+				86D7C1C3573516DE9D8869E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +111,7 @@
 		FFC9B6E01FA231B500B78F9B /* Suporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FF0A66E91FA8F9A200F0392E /* GoogleService-Info.plist */,
 				FFC9B6DA1FA2297100B78F9B /* Info.plist */,
 			);
 			path = "Suporting Files";
@@ -106,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFC9B6DD1FA2297100B78F9B /* Build configuration list for PBXNativeTarget "InstaAd" */;
 			buildPhases = (
+				A91272D9C58E937B129B5578 /* [CP] Check Pods Manifest.lock */,
 				FFC9B6C51FA2297100B78F9B /* Sources */,
 				FFC9B6C61FA2297100B78F9B /* Frameworks */,
 				FFC9B6C71FA2297100B78F9B /* Resources */,
+				8103EF76AC1FB07B627AE19F /* [CP] Embed Pods Frameworks */,
+				93C79144926D93E6FAEDB712 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,12 +188,71 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF0A66E01FA7CB3E00F0392E /* IALoginViewController.xib in Resources */,
+				FF0A66EA1FA8F9A300F0392E /* GoogleService-Info.plist in Resources */,
 				FF0A66DC1FA7CB1C00F0392E /* IARegistrationViewController.xib in Resources */,
 				FFC9B6D61FA2297100B78F9B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8103EF76AC1FB07B627AE19F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-InstaAd/Pods-InstaAd-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaAd/Pods-InstaAd-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93C79144926D93E6FAEDB712 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaAd/Pods-InstaAd-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A91272D9C58E937B129B5578 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaAd-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FFC9B6C51FA2297100B78F9B /* Sources */ = {
@@ -288,6 +377,7 @@
 		};
 		FFC9B6DE1FA2297100B78F9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B340A403BB323D82783D97B /* Pods-InstaAd.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +392,7 @@
 		};
 		FFC9B6DF1FA2297100B78F9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F5E4B1710459467ED17A589 /* Pods-InstaAd.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
