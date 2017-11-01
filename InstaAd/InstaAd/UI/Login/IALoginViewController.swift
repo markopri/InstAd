@@ -27,6 +27,11 @@ class IALoginViewController: UIViewController {
         
     }
     
+    @IBAction func btnCreateNewAccountClicked(_ sender: UIButton) {
+        
+    UIApplication.shared.keyWindow?.rootViewController?.present(IARegistrationViewController(), animated: true, completion: nil)
+        
+    }
     func showAlert() {
         let alertController = UIAlertController(title: "Error", message: "Enter both username and password", preferredStyle: UIAlertControllerStyle.actionSheet)
         

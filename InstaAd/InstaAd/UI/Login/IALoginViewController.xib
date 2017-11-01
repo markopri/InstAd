@@ -50,6 +50,9 @@
                             <rect key="frame" x="112" y="402" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Create new account"/>
+                            <connections>
+                                <action selector="btnCreateNewAccountClicked:" destination="-1" eventType="touchUpInside" id="Mdy-Q0-PKr"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4n-vx-1qH">
                             <rect key="frame" x="72" y="333" width="68" height="30"/>
