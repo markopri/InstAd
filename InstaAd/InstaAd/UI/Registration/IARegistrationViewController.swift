@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class IARegistrationViewController: UIViewController {
 
@@ -23,15 +24,26 @@ class IARegistrationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //MARK: Action methods
+
     //action when Back button is pressed
     @IBAction func backButtonPressed(_ sender: UIButton) {
-        UIApplication.shared.keyWindow?.rootViewController?.present(IALoginViewController(), animated: true, completion: nil);
+        UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: nil);
     }
 
     //action when Register button is pressed
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         if (isRegistrationOk()){
-            NSLog("Uspješna registracija");
+            NSLog("Svi podaci kod registracije su uspješno uneseni");
+
+            Auth.auth().createUser(withEmail: txtEmail.text!, password: txtPassword.text!, completion: {(user, error) in
+                if (user != nil){
+                    NSLog("Korisnik je uspješno registriran");
+                    UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: nil);
+                } else {
+                    self.displayAlert(messageToDisplay: "Email je već zauzet!");
+                }
+            })
         } else {
             NSLog("Registracija neuspješna");
         }
@@ -43,16 +55,9 @@ class IARegistrationViewController: UIViewController {
     func isAllFieldsEntered(enteredEmail : String, enteredPassword : String, enteredRepeatPassword : String) -> Bool {
         var returnValue = true;
 
-        if (enteredEmail.characters.count == 0 || enteredPassword.characters.count == 0 || enteredRepeatPassword.characters.count == 0){
+        if (enteredEmail.count == 0 || enteredPassword.count == 0 || enteredRepeatPassword.count == 0){
             returnValue = false;
         }
-
-        return returnValue;
-    }
-
-    //function to check if email is available or it is already taken
-    func isEmailAvailable(enteredEmail : String) -> Bool {
-        var returnValue = true;
 
         return returnValue;
     }
