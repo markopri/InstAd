@@ -13,6 +13,12 @@
 		FF0A66DF1FA7CB3E00F0392E /* IALoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A66DD1FA7CB3E00F0392E /* IALoginViewController.swift */; };
 		FF0A66E01FA7CB3E00F0392E /* IALoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0A66DE1FA7CB3E00F0392E /* IALoginViewController.xib */; };
 		FF0A66EA1FA8F9A300F0392E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF0A66E91FA8F9A200F0392E /* GoogleService-Info.plist */; };
+		FF32F2821FBCC1070066F3D1 /* IAHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32F2801FBCC1070066F3D1 /* IAHomeViewController.swift */; };
+		FF32F2831FBCC1070066F3D1 /* IAHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32F2811FBCC1070066F3D1 /* IAHomeViewController.xib */; };
+		FF32F2881FBCCAD80066F3D1 /* IADetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32F2861FBCCAD80066F3D1 /* IADetailsViewController.swift */; };
+		FF32F2891FBCCAD80066F3D1 /* IADetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32F2871FBCCAD80066F3D1 /* IADetailsViewController.xib */; };
+		FF32F28C1FBCCAF30066F3D1 /* IAFavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32F28A1FBCCAF30066F3D1 /* IAFavouritesViewController.swift */; };
+		FF32F28D1FBCCAF30066F3D1 /* IAFavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32F28B1FBCCAF30066F3D1 /* IAFavouritesViewController.xib */; };
 		FFC9B6CD1FA2297100B78F9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9B6CC1FA2297100B78F9B /* AppDelegate.swift */; };
 		FFC9B6D61FA2297100B78F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC9B6D51FA2297100B78F9B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -26,6 +32,12 @@
 		FF0A66DD1FA7CB3E00F0392E /* IALoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IALoginViewController.swift; sourceTree = "<group>"; };
 		FF0A66DE1FA7CB3E00F0392E /* IALoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IALoginViewController.xib; sourceTree = "<group>"; };
 		FF0A66E91FA8F9A200F0392E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FF32F2801FBCC1070066F3D1 /* IAHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAHomeViewController.swift; sourceTree = "<group>"; };
+		FF32F2811FBCC1070066F3D1 /* IAHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAHomeViewController.xib; sourceTree = "<group>"; };
+		FF32F2861FBCCAD80066F3D1 /* IADetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IADetailsViewController.swift; sourceTree = "<group>"; };
+		FF32F2871FBCCAD80066F3D1 /* IADetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IADetailsViewController.xib; sourceTree = "<group>"; };
+		FF32F28A1FBCCAF30066F3D1 /* IAFavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAFavouritesViewController.swift; sourceTree = "<group>"; };
+		FF32F28B1FBCCAF30066F3D1 /* IAFavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAFavouritesViewController.xib; sourceTree = "<group>"; };
 		FFC9B6C91FA2297100B78F9B /* InstaAd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaAd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC9B6CC1FA2297100B78F9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC9B6D51FA2297100B78F9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +91,33 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		FF32F27F1FBCC0E40066F3D1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FF32F2801FBCC1070066F3D1 /* IAHomeViewController.swift */,
+				FF32F2811FBCC1070066F3D1 /* IAHomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FF32F2841FBCCAC30066F3D1 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				FF32F2861FBCCAD80066F3D1 /* IADetailsViewController.swift */,
+				FF32F2871FBCCAD80066F3D1 /* IADetailsViewController.xib */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		FF32F2851FBCCAC30066F3D1 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				FF32F28A1FBCCAF30066F3D1 /* IAFavouritesViewController.swift */,
+				FF32F28B1FBCCAF30066F3D1 /* IAFavouritesViewController.xib */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
 		FFC9B6C01FA2297100B78F9B = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +159,9 @@
 		FFC9B6E11FA231E100B78F9B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FF32F2841FBCCAC30066F3D1 /* Details */,
+				FF32F2851FBCCAC30066F3D1 /* Favourites */,
+				FF32F27F1FBCC0E40066F3D1 /* Home */,
 				FF0A66D81FA7CACF00F0392E /* Login */,
 				FF0A66D61FA7CACF00F0392E /* Registration */,
 			);
@@ -189,7 +231,10 @@
 			files = (
 				FF0A66E01FA7CB3E00F0392E /* IALoginViewController.xib in Resources */,
 				FF0A66EA1FA8F9A300F0392E /* GoogleService-Info.plist in Resources */,
+				FF32F2831FBCC1070066F3D1 /* IAHomeViewController.xib in Resources */,
+				FF32F2891FBCCAD80066F3D1 /* IADetailsViewController.xib in Resources */,
 				FF0A66DC1FA7CB1C00F0392E /* IARegistrationViewController.xib in Resources */,
+				FF32F28D1FBCCAF30066F3D1 /* IAFavouritesViewController.xib in Resources */,
 				FFC9B6D61FA2297100B78F9B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,9 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF32F28C1FBCCAF30066F3D1 /* IAFavouritesViewController.swift in Sources */,
+				FF32F2881FBCCAD80066F3D1 /* IADetailsViewController.swift in Sources */,
 				FFC9B6CD1FA2297100B78F9B /* AppDelegate.swift in Sources */,
 				FF0A66DF1FA7CB3E00F0392E /* IALoginViewController.swift in Sources */,
 				FF0A66DB1FA7CB1C00F0392E /* IARegistrationViewController.swift in Sources */,
+				FF32F2821FBCC1070066F3D1 /* IAHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
