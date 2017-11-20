@@ -1,18 +1,18 @@
 //
-//  IAFavouritesViewController.swift
+//  IASettingsViewController.swift
 //  InstaAd
 //
-//  Created by Marko Koprivnjak on 15/11/2017.
+//  Created by Marko Koprivnjak on 20/11/2017.
 //
 
 import UIKit
 
-class IAFavouritesViewController: UIViewController {
+class IASettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor .red;
+        view.backgroundColor = UIColor .green;
     }
 
     override func didReceiveMemoryWarning() {

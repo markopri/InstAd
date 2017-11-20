@@ -15,13 +15,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        //Use Firebase library toconfigure APIs
+        //Use Firebase library to configure APIs
         FirebaseApp.configure();
 
         window = UIWindow(frame: UIScreen.main.bounds);
         window?.makeKeyAndVisible();
 
-        window?.rootViewController = IALoginViewController();
+        //tab bar navigation controllers
+        if (Auth.auth().currentUser == nil)
+        {
+            let navigationControllerHome = UINavigationController();
+            let homeViewController = IAHomeViewController();
+            navigationControllerHome.viewControllers = [homeViewController];
+            navigationControllerHome.tabBarItem = UITabBarItem(title: "Home", image: UIImage (named: "instaAd_home"), selectedImage: nil);
+
+            let navigationControllerFavourites = UINavigationController();
+            let favouritesViewController = IAFavouritesViewController();
+            navigationControllerFavourites.viewControllers = [favouritesViewController];
+            navigationControllerFavourites.tabBarItem = UITabBarItem(title: "Favourites", image: UIImage (named: "instaAd_favourites"), selectedImage: nil);
+
+            let navigationControllerSettings = UINavigationController();
+            let settingsViewController = IASettingsViewController();
+            navigationControllerSettings.viewControllers = [settingsViewController];
+            navigationControllerSettings.tabBarItem = UITabBarItem(title: "Settings", image: UIImage (named: "instaAd_settings"), selectedImage: nil);
+
+            let tabBar = UITabBarController();
+            tabBar.viewControllers = [navigationControllerHome, navigationControllerFavourites, navigationControllerSettings];
+            window?.rootViewController = tabBar;
+        }
+        else
+        {
+            window?.rootViewController = IALoginViewController();
+        }
 
         return true
     }

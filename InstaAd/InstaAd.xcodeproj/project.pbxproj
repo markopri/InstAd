@@ -13,6 +13,11 @@
 		FF0A66DF1FA7CB3E00F0392E /* IALoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A66DD1FA7CB3E00F0392E /* IALoginViewController.swift */; };
 		FF0A66E01FA7CB3E00F0392E /* IALoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0A66DE1FA7CB3E00F0392E /* IALoginViewController.xib */; };
 		FF0A66EA1FA8F9A300F0392E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF0A66E91FA8F9A200F0392E /* GoogleService-Info.plist */; };
+		FF2FEEB61FC3179400C23A22 /* IASettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2FEEB41FC3179400C23A22 /* IASettingsViewController.swift */; };
+		FF2FEEB71FC3179400C23A22 /* IASettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEB51FC3179400C23A22 /* IASettingsViewController.xib */; };
+		FF2FEEBA1FC31B0A00C23A22 /* instaAd_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */; };
+		FF2FEEBC1FC31C4A00C23A22 /* instaAd_favourites.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEBB1FC31C4A00C23A22 /* instaAd_favourites.png */; };
+		FF2FEEBE1FC31C8300C23A22 /* instaAd_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEBD1FC31C8300C23A22 /* instaAd_settings.png */; };
 		FF32F2821FBCC1070066F3D1 /* IAHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32F2801FBCC1070066F3D1 /* IAHomeViewController.swift */; };
 		FF32F2831FBCC1070066F3D1 /* IAHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32F2811FBCC1070066F3D1 /* IAHomeViewController.xib */; };
 		FF32F2881FBCCAD80066F3D1 /* IADetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32F2861FBCCAD80066F3D1 /* IADetailsViewController.swift */; };
@@ -32,6 +37,11 @@
 		FF0A66DD1FA7CB3E00F0392E /* IALoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IALoginViewController.swift; sourceTree = "<group>"; };
 		FF0A66DE1FA7CB3E00F0392E /* IALoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IALoginViewController.xib; sourceTree = "<group>"; };
 		FF0A66E91FA8F9A200F0392E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FF2FEEB41FC3179400C23A22 /* IASettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IASettingsViewController.swift; sourceTree = "<group>"; };
+		FF2FEEB51FC3179400C23A22 /* IASettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IASettingsViewController.xib; sourceTree = "<group>"; };
+		FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_home.png; sourceTree = "<group>"; };
+		FF2FEEBB1FC31C4A00C23A22 /* instaAd_favourites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_favourites.png; sourceTree = "<group>"; };
+		FF2FEEBD1FC31C8300C23A22 /* instaAd_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_settings.png; sourceTree = "<group>"; };
 		FF32F2801FBCC1070066F3D1 /* IAHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAHomeViewController.swift; sourceTree = "<group>"; };
 		FF32F2811FBCC1070066F3D1 /* IAHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAHomeViewController.xib; sourceTree = "<group>"; };
 		FF32F2861FBCCAD80066F3D1 /* IADetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IADetailsViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +101,25 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		FF2FEEB31FC3175B00C23A22 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FF2FEEB41FC3179400C23A22 /* IASettingsViewController.swift */,
+				FF2FEEB51FC3179400C23A22 /* IASettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FF2FEEB81FC319EC00C23A22 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FF2FEEBB1FC31C4A00C23A22 /* instaAd_favourites.png */,
+				FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */,
+				FF2FEEBD1FC31C8300C23A22 /* instaAd_settings.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FF32F27F1FBCC0E40066F3D1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,9 +169,10 @@
 			isa = PBXGroup;
 			children = (
 				FFC9B6CC1FA2297100B78F9B /* AppDelegate.swift */,
-				FFC9B6E11FA231E100B78F9B /* UI */,
-				FFC9B6E01FA231B500B78F9B /* Suporting Files */,
 				FFC9B6D51FA2297100B78F9B /* Assets.xcassets */,
+				FFC9B6E11FA231E100B78F9B /* UI */,
+				FF2FEEB81FC319EC00C23A22 /* Resources */,
+				FFC9B6E01FA231B500B78F9B /* Suporting Files */,
 			);
 			path = InstaAd;
 			sourceTree = "<group>";
@@ -164,6 +194,7 @@
 				FF32F27F1FBCC0E40066F3D1 /* Home */,
 				FF0A66D81FA7CACF00F0392E /* Login */,
 				FF0A66D61FA7CACF00F0392E /* Registration */,
+				FF2FEEB31FC3175B00C23A22 /* Settings */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -231,11 +262,15 @@
 			files = (
 				FF0A66E01FA7CB3E00F0392E /* IALoginViewController.xib in Resources */,
 				FF0A66EA1FA8F9A300F0392E /* GoogleService-Info.plist in Resources */,
+				FF2FEEBE1FC31C8300C23A22 /* instaAd_settings.png in Resources */,
+				FF2FEEBC1FC31C4A00C23A22 /* instaAd_favourites.png in Resources */,
 				FF32F2831FBCC1070066F3D1 /* IAHomeViewController.xib in Resources */,
 				FF32F2891FBCCAD80066F3D1 /* IADetailsViewController.xib in Resources */,
 				FF0A66DC1FA7CB1C00F0392E /* IARegistrationViewController.xib in Resources */,
+				FF2FEEBA1FC31B0A00C23A22 /* instaAd_home.png in Resources */,
 				FF32F28D1FBCCAF30066F3D1 /* IAFavouritesViewController.xib in Resources */,
 				FFC9B6D61FA2297100B78F9B /* Assets.xcassets in Resources */,
+				FF2FEEB71FC3179400C23A22 /* IASettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +343,7 @@
 			files = (
 				FF32F28C1FBCCAF30066F3D1 /* IAFavouritesViewController.swift in Sources */,
 				FF32F2881FBCCAD80066F3D1 /* IADetailsViewController.swift in Sources */,
+				FF2FEEB61FC3179400C23A22 /* IASettingsViewController.swift in Sources */,
 				FFC9B6CD1FA2297100B78F9B /* AppDelegate.swift in Sources */,
 				FF0A66DF1FA7CB3E00F0392E /* IALoginViewController.swift in Sources */,
 				FF0A66DB1FA7CB1C00F0392E /* IARegistrationViewController.swift in Sources */,

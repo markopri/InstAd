@@ -9,8 +9,11 @@ import UIKit
 
 class IAHomeViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor .red;
 
         // Do any additional setup after loading the view.
     }
