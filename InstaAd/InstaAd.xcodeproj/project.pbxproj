@@ -18,12 +18,15 @@
 		FF2FEEBA1FC31B0A00C23A22 /* instaAd_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */; };
 		FF2FEEBC1FC31C4A00C23A22 /* instaAd_favourites.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEBB1FC31C4A00C23A22 /* instaAd_favourites.png */; };
 		FF2FEEBE1FC31C8300C23A22 /* instaAd_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEBD1FC31C8300C23A22 /* instaAd_settings.png */; };
+		FF2FEEC51FC3289A00C23A22 /* IAHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2FEEC31FC3289A00C23A22 /* IAHomeTableViewCell.swift */; };
+		FF2FEEC61FC3289A00C23A22 /* IAHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEC41FC3289A00C23A22 /* IAHomeTableViewCell.xib */; };
 		FF32F2821FBCC1070066F3D1 /* IAHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32F2801FBCC1070066F3D1 /* IAHomeViewController.swift */; };
 		FF32F2831FBCC1070066F3D1 /* IAHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32F2811FBCC1070066F3D1 /* IAHomeViewController.xib */; };
 		FF32F2881FBCCAD80066F3D1 /* IADetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32F2861FBCCAD80066F3D1 /* IADetailsViewController.swift */; };
 		FF32F2891FBCCAD80066F3D1 /* IADetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32F2871FBCCAD80066F3D1 /* IADetailsViewController.xib */; };
 		FF32F28C1FBCCAF30066F3D1 /* IAFavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32F28A1FBCCAF30066F3D1 /* IAFavouritesViewController.swift */; };
 		FF32F28D1FBCCAF30066F3D1 /* IAFavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32F28B1FBCCAF30066F3D1 /* IAFavouritesViewController.xib */; };
+		FF606F5E1FCAE2A00043D003 /* instaAd_no_image_available.png in Resources */ = {isa = PBXBuildFile; fileRef = FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */; };
 		FFC9B6CD1FA2297100B78F9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9B6CC1FA2297100B78F9B /* AppDelegate.swift */; };
 		FFC9B6D61FA2297100B78F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC9B6D51FA2297100B78F9B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -42,12 +45,15 @@
 		FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_home.png; sourceTree = "<group>"; };
 		FF2FEEBB1FC31C4A00C23A22 /* instaAd_favourites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_favourites.png; sourceTree = "<group>"; };
 		FF2FEEBD1FC31C8300C23A22 /* instaAd_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_settings.png; sourceTree = "<group>"; };
+		FF2FEEC31FC3289A00C23A22 /* IAHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAHomeTableViewCell.swift; sourceTree = "<group>"; };
+		FF2FEEC41FC3289A00C23A22 /* IAHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAHomeTableViewCell.xib; sourceTree = "<group>"; };
 		FF32F2801FBCC1070066F3D1 /* IAHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAHomeViewController.swift; sourceTree = "<group>"; };
 		FF32F2811FBCC1070066F3D1 /* IAHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAHomeViewController.xib; sourceTree = "<group>"; };
 		FF32F2861FBCCAD80066F3D1 /* IADetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IADetailsViewController.swift; sourceTree = "<group>"; };
 		FF32F2871FBCCAD80066F3D1 /* IADetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IADetailsViewController.xib; sourceTree = "<group>"; };
 		FF32F28A1FBCCAF30066F3D1 /* IAFavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAFavouritesViewController.swift; sourceTree = "<group>"; };
 		FF32F28B1FBCCAF30066F3D1 /* IAFavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAFavouritesViewController.xib; sourceTree = "<group>"; };
+		FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_no_image_available.png; sourceTree = "<group>"; };
 		FFC9B6C91FA2297100B78F9B /* InstaAd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaAd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC9B6CC1FA2297100B78F9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC9B6D51FA2297100B78F9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 			children = (
 				FF2FEEBB1FC31C4A00C23A22 /* instaAd_favourites.png */,
 				FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */,
+				FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */,
 				FF2FEEBD1FC31C8300C23A22 /* instaAd_settings.png */,
 			);
 			path = Resources;
@@ -125,6 +132,8 @@
 			children = (
 				FF32F2801FBCC1070066F3D1 /* IAHomeViewController.swift */,
 				FF32F2811FBCC1070066F3D1 /* IAHomeViewController.xib */,
+				FF2FEEC31FC3289A00C23A22 /* IAHomeTableViewCell.swift */,
+				FF2FEEC41FC3289A00C23A22 /* IAHomeTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -270,6 +279,8 @@
 				FF2FEEBA1FC31B0A00C23A22 /* instaAd_home.png in Resources */,
 				FF32F28D1FBCCAF30066F3D1 /* IAFavouritesViewController.xib in Resources */,
 				FFC9B6D61FA2297100B78F9B /* Assets.xcassets in Resources */,
+				FF606F5E1FCAE2A00043D003 /* instaAd_no_image_available.png in Resources */,
+				FF2FEEC61FC3289A00C23A22 /* IAHomeTableViewCell.xib in Resources */,
 				FF2FEEB71FC3179400C23A22 /* IASettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +314,7 @@
 		};
 		93C79144926D93E6FAEDB712 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -311,7 +322,7 @@
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaAd/Pods-InstaAd-resources.sh\"\n";
 			showEnvVarsInLog = 0;
@@ -343,6 +354,7 @@
 			files = (
 				FF32F28C1FBCCAF30066F3D1 /* IAFavouritesViewController.swift in Sources */,
 				FF32F2881FBCCAD80066F3D1 /* IADetailsViewController.swift in Sources */,
+				FF2FEEC51FC3289A00C23A22 /* IAHomeTableViewCell.swift in Sources */,
 				FF2FEEB61FC3179400C23A22 /* IASettingsViewController.swift in Sources */,
 				FFC9B6CD1FA2297100B78F9B /* AppDelegate.swift in Sources */,
 				FF0A66DF1FA7CB3E00F0392E /* IALoginViewController.swift in Sources */,
@@ -467,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SLNF684RRR;
 				INFOPLIST_FILE = "$(SRCROOT)/InstaAd/Suporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.foi.InstaAd;
@@ -482,6 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SLNF684RRR;
 				INFOPLIST_FILE = "$(SRCROOT)/InstaAd/Suporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.foi.InstaAd;

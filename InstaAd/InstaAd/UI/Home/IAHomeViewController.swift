@@ -7,31 +7,37 @@
 
 import UIKit
 
-class IAHomeViewController: UIViewController {
+class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = UIColor .red;
-
-        // Do any additional setup after loading the view.
+        super.viewDidLoad();
+        tableView.register(UINib (nibName: "IAHomeTableViewCell", bundle: nil), forCellReuseIdentifier: "IAHomeTableViewCell");
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 356;
     }
-    */
 
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        NSLog("usoh u dio 1");
+        return 5;
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        NSLog("usoh u dio 2");
+        let cell = tableView.dequeueReusableCell(withIdentifier: "IAHomeTableViewCell", for: indexPath) as! IAHomeTableViewCell
+        cell.imgEventImage.image = UIImage (named: "instaAd_no_image_available");
+        cell.lblEventName.text = "Prvi studentski party ove godine u Barfly-u";
+        cell.lblEventPlace.text = "Barfly";
+        cell.lblEventDateTime.text = "1.12.2018";
+
+        return cell
+    }
 }
