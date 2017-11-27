@@ -18,7 +18,6 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -26,7 +25,7 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        NSLog("usoh u dio 1");
+        //TODO check how many entries is in json and then return that value
         return 5;
     }
 
@@ -39,5 +38,10 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.lblEventDateTime.text = "1.12.2018";
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let pushViewController = IADetailsViewController();
+        self.navigationController?.pushViewController(pushViewController, animated: true);
     }
 }

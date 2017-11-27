@@ -34,13 +34,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             navigationControllerFavourites.viewControllers = [favouritesViewController];
             navigationControllerFavourites.tabBarItem = UITabBarItem(title: "Favourites", image: UIImage (named: "instaAd_favourites"), selectedImage: nil);
 
+            let navigationControllerPlaces = UINavigationController();
+            let placesViewController = IAPlacesViewController();
+            navigationControllerPlaces.viewControllers = [placesViewController];
+            navigationControllerPlaces.tabBarItem = UITabBarItem(title: "Places", image: UIImage (named: "instaAd_places"), selectedImage: nil);
+
             let navigationControllerSettings = UINavigationController();
             let settingsViewController = IASettingsViewController();
             navigationControllerSettings.viewControllers = [settingsViewController];
             navigationControllerSettings.tabBarItem = UITabBarItem(title: "Settings", image: UIImage (named: "instaAd_settings"), selectedImage: nil);
 
             let tabBar = UITabBarController();
-            tabBar.viewControllers = [navigationControllerHome, navigationControllerFavourites, navigationControllerSettings];
+            tabBar.viewControllers = [navigationControllerHome, navigationControllerFavourites, navigationControllerPlaces, navigationControllerSettings];
             window?.rootViewController = tabBar;
         }
         else

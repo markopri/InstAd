@@ -16,7 +16,7 @@
 		FF2FEEB61FC3179400C23A22 /* IASettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2FEEB41FC3179400C23A22 /* IASettingsViewController.swift */; };
 		FF2FEEB71FC3179400C23A22 /* IASettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEB51FC3179400C23A22 /* IASettingsViewController.xib */; };
 		FF2FEEBA1FC31B0A00C23A22 /* instaAd_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */; };
-		FF2FEEBC1FC31C4A00C23A22 /* instaAd_favourites.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEBB1FC31C4A00C23A22 /* instaAd_favourites.png */; };
+		FF2FEEBC1FC31C4A00C23A22 /* instaAd_places.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEBB1FC31C4A00C23A22 /* instaAd_places.png */; };
 		FF2FEEBE1FC31C8300C23A22 /* instaAd_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEBD1FC31C8300C23A22 /* instaAd_settings.png */; };
 		FF2FEEC51FC3289A00C23A22 /* IAHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2FEEC31FC3289A00C23A22 /* IAHomeTableViewCell.swift */; };
 		FF2FEEC61FC3289A00C23A22 /* IAHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEC41FC3289A00C23A22 /* IAHomeTableViewCell.xib */; };
@@ -27,6 +27,19 @@
 		FF32F28C1FBCCAF30066F3D1 /* IAFavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32F28A1FBCCAF30066F3D1 /* IAFavouritesViewController.swift */; };
 		FF32F28D1FBCCAF30066F3D1 /* IAFavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32F28B1FBCCAF30066F3D1 /* IAFavouritesViewController.xib */; };
 		FF606F5E1FCAE2A00043D003 /* instaAd_no_image_available.png in Resources */ = {isa = PBXBuildFile; fileRef = FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */; };
+		FF606F621FCB18B20043D003 /* IAPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF606F601FCB18B20043D003 /* IAPlacesViewController.swift */; };
+		FF606F631FCB18B20043D003 /* IAPlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF606F611FCB18B20043D003 /* IAPlacesViewController.xib */; };
+		FF606F671FCB25660043D003 /* IADetailsEventNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF606F651FCB25660043D003 /* IADetailsEventNameTableViewCell.swift */; };
+		FF606F681FCB25660043D003 /* IADetailsEventNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF606F661FCB25660043D003 /* IADetailsEventNameTableViewCell.xib */; };
+		FF606F6B1FCB25CB0043D003 /* IADetailsEventImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF606F691FCB25CB0043D003 /* IADetailsEventImageTableViewCell.swift */; };
+		FF606F6C1FCB25CB0043D003 /* IADetailsEventImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF606F6A1FCB25CB0043D003 /* IADetailsEventImageTableViewCell.xib */; };
+		FF606F6F1FCB26140043D003 /* IADetailsEventDTPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF606F6D1FCB26140043D003 /* IADetailsEventDTPTableViewCell.swift */; };
+		FF606F701FCB26140043D003 /* IADetailsEventDTPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF606F6E1FCB26140043D003 /* IADetailsEventDTPTableViewCell.xib */; };
+		FF606F731FCB26290043D003 /* IADetailsEventDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF606F711FCB26290043D003 /* IADetailsEventDescriptionTableViewCell.swift */; };
+		FF606F741FCB26290043D003 /* IADetailsEventDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF606F721FCB26290043D003 /* IADetailsEventDescriptionTableViewCell.xib */; };
+		FF606F771FCB263C0043D003 /* IADetailsEventMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF606F751FCB263C0043D003 /* IADetailsEventMapTableViewCell.swift */; };
+		FF606F781FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF606F761FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib */; };
+		FF606F7A1FCC01640043D003 /* instaAd_favourites.png in Resources */ = {isa = PBXBuildFile; fileRef = FF606F791FCC01640043D003 /* instaAd_favourites.png */; };
 		FFC9B6CD1FA2297100B78F9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9B6CC1FA2297100B78F9B /* AppDelegate.swift */; };
 		FFC9B6D61FA2297100B78F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC9B6D51FA2297100B78F9B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -43,7 +56,7 @@
 		FF2FEEB41FC3179400C23A22 /* IASettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IASettingsViewController.swift; sourceTree = "<group>"; };
 		FF2FEEB51FC3179400C23A22 /* IASettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IASettingsViewController.xib; sourceTree = "<group>"; };
 		FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_home.png; sourceTree = "<group>"; };
-		FF2FEEBB1FC31C4A00C23A22 /* instaAd_favourites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_favourites.png; sourceTree = "<group>"; };
+		FF2FEEBB1FC31C4A00C23A22 /* instaAd_places.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_places.png; sourceTree = "<group>"; };
 		FF2FEEBD1FC31C8300C23A22 /* instaAd_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_settings.png; sourceTree = "<group>"; };
 		FF2FEEC31FC3289A00C23A22 /* IAHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAHomeTableViewCell.swift; sourceTree = "<group>"; };
 		FF2FEEC41FC3289A00C23A22 /* IAHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAHomeTableViewCell.xib; sourceTree = "<group>"; };
@@ -54,6 +67,19 @@
 		FF32F28A1FBCCAF30066F3D1 /* IAFavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAFavouritesViewController.swift; sourceTree = "<group>"; };
 		FF32F28B1FBCCAF30066F3D1 /* IAFavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAFavouritesViewController.xib; sourceTree = "<group>"; };
 		FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_no_image_available.png; sourceTree = "<group>"; };
+		FF606F601FCB18B20043D003 /* IAPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPlacesViewController.swift; sourceTree = "<group>"; };
+		FF606F611FCB18B20043D003 /* IAPlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAPlacesViewController.xib; sourceTree = "<group>"; };
+		FF606F651FCB25660043D003 /* IADetailsEventNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IADetailsEventNameTableViewCell.swift; sourceTree = "<group>"; };
+		FF606F661FCB25660043D003 /* IADetailsEventNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IADetailsEventNameTableViewCell.xib; sourceTree = "<group>"; };
+		FF606F691FCB25CB0043D003 /* IADetailsEventImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IADetailsEventImageTableViewCell.swift; sourceTree = "<group>"; };
+		FF606F6A1FCB25CB0043D003 /* IADetailsEventImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IADetailsEventImageTableViewCell.xib; sourceTree = "<group>"; };
+		FF606F6D1FCB26140043D003 /* IADetailsEventDTPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IADetailsEventDTPTableViewCell.swift; sourceTree = "<group>"; };
+		FF606F6E1FCB26140043D003 /* IADetailsEventDTPTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IADetailsEventDTPTableViewCell.xib; sourceTree = "<group>"; };
+		FF606F711FCB26290043D003 /* IADetailsEventDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IADetailsEventDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		FF606F721FCB26290043D003 /* IADetailsEventDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IADetailsEventDescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		FF606F751FCB263C0043D003 /* IADetailsEventMapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IADetailsEventMapTableViewCell.swift; sourceTree = "<group>"; };
+		FF606F761FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IADetailsEventMapTableViewCell.xib; sourceTree = "<group>"; };
+		FF606F791FCC01640043D003 /* instaAd_favourites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_favourites.png; sourceTree = "<group>"; };
 		FFC9B6C91FA2297100B78F9B /* InstaAd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaAd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC9B6CC1FA2297100B78F9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC9B6D51FA2297100B78F9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,9 +145,10 @@
 		FF2FEEB81FC319EC00C23A22 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FF2FEEBB1FC31C4A00C23A22 /* instaAd_favourites.png */,
+				FF606F791FCC01640043D003 /* instaAd_favourites.png */,
 				FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */,
 				FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */,
+				FF2FEEBB1FC31C4A00C23A22 /* instaAd_places.png */,
 				FF2FEEBD1FC31C8300C23A22 /* instaAd_settings.png */,
 			);
 			path = Resources;
@@ -141,6 +168,7 @@
 		FF32F2841FBCCAC30066F3D1 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				FF606F641FCB23E60043D003 /* DetailsCells */,
 				FF32F2861FBCCAD80066F3D1 /* IADetailsViewController.swift */,
 				FF32F2871FBCCAD80066F3D1 /* IADetailsViewController.xib */,
 			);
@@ -154,6 +182,32 @@
 				FF32F28B1FBCCAF30066F3D1 /* IAFavouritesViewController.xib */,
 			);
 			path = Favourites;
+			sourceTree = "<group>";
+		};
+		FF606F5F1FCB18900043D003 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				FF606F601FCB18B20043D003 /* IAPlacesViewController.swift */,
+				FF606F611FCB18B20043D003 /* IAPlacesViewController.xib */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		FF606F641FCB23E60043D003 /* DetailsCells */ = {
+			isa = PBXGroup;
+			children = (
+				FF606F651FCB25660043D003 /* IADetailsEventNameTableViewCell.swift */,
+				FF606F661FCB25660043D003 /* IADetailsEventNameTableViewCell.xib */,
+				FF606F691FCB25CB0043D003 /* IADetailsEventImageTableViewCell.swift */,
+				FF606F6A1FCB25CB0043D003 /* IADetailsEventImageTableViewCell.xib */,
+				FF606F6D1FCB26140043D003 /* IADetailsEventDTPTableViewCell.swift */,
+				FF606F6E1FCB26140043D003 /* IADetailsEventDTPTableViewCell.xib */,
+				FF606F711FCB26290043D003 /* IADetailsEventDescriptionTableViewCell.swift */,
+				FF606F721FCB26290043D003 /* IADetailsEventDescriptionTableViewCell.xib */,
+				FF606F751FCB263C0043D003 /* IADetailsEventMapTableViewCell.swift */,
+				FF606F761FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib */,
+			);
+			path = DetailsCells;
 			sourceTree = "<group>";
 		};
 		FFC9B6C01FA2297100B78F9B = {
@@ -202,6 +256,7 @@
 				FF32F2851FBCCAC30066F3D1 /* Favourites */,
 				FF32F27F1FBCC0E40066F3D1 /* Home */,
 				FF0A66D81FA7CACF00F0392E /* Login */,
+				FF606F5F1FCB18900043D003 /* Places */,
 				FF0A66D61FA7CACF00F0392E /* Registration */,
 				FF2FEEB31FC3175B00C23A22 /* Settings */,
 			);
@@ -272,15 +327,22 @@
 				FF0A66E01FA7CB3E00F0392E /* IALoginViewController.xib in Resources */,
 				FF0A66EA1FA8F9A300F0392E /* GoogleService-Info.plist in Resources */,
 				FF2FEEBE1FC31C8300C23A22 /* instaAd_settings.png in Resources */,
-				FF2FEEBC1FC31C4A00C23A22 /* instaAd_favourites.png in Resources */,
+				FF606F681FCB25660043D003 /* IADetailsEventNameTableViewCell.xib in Resources */,
+				FF2FEEBC1FC31C4A00C23A22 /* instaAd_places.png in Resources */,
+				FF606F781FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib in Resources */,
 				FF32F2831FBCC1070066F3D1 /* IAHomeViewController.xib in Resources */,
 				FF32F2891FBCCAD80066F3D1 /* IADetailsViewController.xib in Resources */,
+				FF606F701FCB26140043D003 /* IADetailsEventDTPTableViewCell.xib in Resources */,
 				FF0A66DC1FA7CB1C00F0392E /* IARegistrationViewController.xib in Resources */,
 				FF2FEEBA1FC31B0A00C23A22 /* instaAd_home.png in Resources */,
 				FF32F28D1FBCCAF30066F3D1 /* IAFavouritesViewController.xib in Resources */,
+				FF606F7A1FCC01640043D003 /* instaAd_favourites.png in Resources */,
 				FFC9B6D61FA2297100B78F9B /* Assets.xcassets in Resources */,
+				FF606F631FCB18B20043D003 /* IAPlacesViewController.xib in Resources */,
 				FF606F5E1FCAE2A00043D003 /* instaAd_no_image_available.png in Resources */,
+				FF606F6C1FCB25CB0043D003 /* IADetailsEventImageTableViewCell.xib in Resources */,
 				FF2FEEC61FC3289A00C23A22 /* IAHomeTableViewCell.xib in Resources */,
+				FF606F741FCB26290043D003 /* IADetailsEventDescriptionTableViewCell.xib in Resources */,
 				FF2FEEB71FC3179400C23A22 /* IASettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,10 +416,16 @@
 			files = (
 				FF32F28C1FBCCAF30066F3D1 /* IAFavouritesViewController.swift in Sources */,
 				FF32F2881FBCCAD80066F3D1 /* IADetailsViewController.swift in Sources */,
+				FF606F621FCB18B20043D003 /* IAPlacesViewController.swift in Sources */,
 				FF2FEEC51FC3289A00C23A22 /* IAHomeTableViewCell.swift in Sources */,
+				FF606F6F1FCB26140043D003 /* IADetailsEventDTPTableViewCell.swift in Sources */,
+				FF606F671FCB25660043D003 /* IADetailsEventNameTableViewCell.swift in Sources */,
 				FF2FEEB61FC3179400C23A22 /* IASettingsViewController.swift in Sources */,
 				FFC9B6CD1FA2297100B78F9B /* AppDelegate.swift in Sources */,
+				FF606F771FCB263C0043D003 /* IADetailsEventMapTableViewCell.swift in Sources */,
+				FF606F731FCB26290043D003 /* IADetailsEventDescriptionTableViewCell.swift in Sources */,
 				FF0A66DF1FA7CB3E00F0392E /* IALoginViewController.swift in Sources */,
+				FF606F6B1FCB25CB0043D003 /* IADetailsEventImageTableViewCell.swift in Sources */,
 				FF0A66DB1FA7CB1C00F0392E /* IARegistrationViewController.swift in Sources */,
 				FF32F2821FBCC1070066F3D1 /* IAHomeViewController.swift in Sources */,
 			);
