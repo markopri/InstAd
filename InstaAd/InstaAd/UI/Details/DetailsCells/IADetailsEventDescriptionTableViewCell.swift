@@ -8,8 +8,8 @@
 import UIKit
 
 class IADetailsEventDescriptionTableViewCell: UITableViewCell {
-    @IBOutlet weak var lblEventDescription: UILabel!
-
+    @IBOutlet weak var txtEventDescription: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

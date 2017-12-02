@@ -29,7 +29,8 @@ class IADetailsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
+        switch indexPath.row
+        {
         case 0:
             return 44;
         case 1:
@@ -48,7 +49,8 @@ class IADetailsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
+        switch indexPath.row
+        {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventNameTableViewCell", for: indexPath) as! IADetailsEventNameTableViewCell;
             cell.lblEventName.text = "Veceras premijera u kinu";
@@ -59,12 +61,17 @@ class IADetailsViewController: UIViewController, UITableViewDelegate, UITableVie
             return cell;
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventDTPTableViewCell", for: indexPath) as! IADetailsEventDTPTableViewCell;
+            cell.imgEventDTPIcon.image = UIImage (named: "instaAd_calendar");
+            cell.lblEventDTPValue.text = "31.12.2017. 22:00:00";
             return cell;
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventDTPTableViewCell", for: indexPath) as! IADetailsEventDTPTableViewCell;
+            cell.imgEventDTPIcon.image = UIImage (named: "instaAd_location");
+            cell.lblEventDTPValue.text = "Barfly, Varaždin";
             return cell;
         case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventDescriptionTableViewCell", for: indexPath) as! IADetailsEventDescriptionTableViewCell;
+            cell.txtEventDescription.text = "Ove godine dočekajte Novu godinu u Barflyu uz najbolju zabavu u gradu. Kako bismo Vam to omogućili zabavljat će nas Prljavo kazalište uz promotivne cijene pićaOve godine dočekajte Novu godinu u Barflyu uz najbolju zabavu u gradu. Kako bismo Vam to omogućili zabavljat će nas Prljavo kazalište uz promotivne cijene pića";
             return cell;
         case 5:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventMapTableViewCell", for: indexPath) as! IADetailsEventMapTableViewCell;

@@ -13,6 +13,7 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad();
+        //TODO first load all entries from database (in a function and save them in array)
         tableView.register(UINib (nibName: "IAHomeTableViewCell", bundle: nil), forCellReuseIdentifier: "IAHomeTableViewCell");
     }
 
@@ -26,18 +27,18 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //TODO check how many entries is in json and then return that value
+        //TODO check how many entries is in database and then return that value (from array)
         return 5;
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        NSLog("usoh u dio 2");
         let cell = tableView.dequeueReusableCell(withIdentifier: "IAHomeTableViewCell", for: indexPath) as! IAHomeTableViewCell
         cell.imgEventImage.image = UIImage (named: "instaAd_no_image_available");
         cell.lblEventName.text = "Prvi studentski party ove godine u Barfly-u";
         cell.lblEventPlace.text = "Barfly";
         cell.lblEventDateTime.text = "1.12.2018";
 
-        return cell
+        return cell;
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

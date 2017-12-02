@@ -13,6 +13,8 @@
 		FF0A66DF1FA7CB3E00F0392E /* IALoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A66DD1FA7CB3E00F0392E /* IALoginViewController.swift */; };
 		FF0A66E01FA7CB3E00F0392E /* IALoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0A66DE1FA7CB3E00F0392E /* IALoginViewController.xib */; };
 		FF0A66EA1FA8F9A300F0392E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF0A66E91FA8F9A200F0392E /* GoogleService-Info.plist */; };
+		FF12F1D01FCD6AD5006B04BE /* instaAd_calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = FF12F1CF1FCD6AD5006B04BE /* instaAd_calendar.png */; };
+		FF12F1D21FCD6BF8006B04BE /* instaAd_location.png in Resources */ = {isa = PBXBuildFile; fileRef = FF12F1D11FCD6BF8006B04BE /* instaAd_location.png */; };
 		FF2FEEB61FC3179400C23A22 /* IASettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2FEEB41FC3179400C23A22 /* IASettingsViewController.swift */; };
 		FF2FEEB71FC3179400C23A22 /* IASettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEB51FC3179400C23A22 /* IASettingsViewController.xib */; };
 		FF2FEEBA1FC31B0A00C23A22 /* instaAd_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */; };
@@ -53,6 +55,8 @@
 		FF0A66DD1FA7CB3E00F0392E /* IALoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IALoginViewController.swift; sourceTree = "<group>"; };
 		FF0A66DE1FA7CB3E00F0392E /* IALoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IALoginViewController.xib; sourceTree = "<group>"; };
 		FF0A66E91FA8F9A200F0392E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FF12F1CF1FCD6AD5006B04BE /* instaAd_calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_calendar.png; sourceTree = "<group>"; };
+		FF12F1D11FCD6BF8006B04BE /* instaAd_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_location.png; sourceTree = "<group>"; };
 		FF2FEEB41FC3179400C23A22 /* IASettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IASettingsViewController.swift; sourceTree = "<group>"; };
 		FF2FEEB51FC3179400C23A22 /* IASettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IASettingsViewController.xib; sourceTree = "<group>"; };
 		FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_home.png; sourceTree = "<group>"; };
@@ -145,8 +149,10 @@
 		FF2FEEB81FC319EC00C23A22 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FF12F1CF1FCD6AD5006B04BE /* instaAd_calendar.png */,
 				FF606F791FCC01640043D003 /* instaAd_favourites.png */,
 				FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */,
+				FF12F1D11FCD6BF8006B04BE /* instaAd_location.png */,
 				FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */,
 				FF2FEEBB1FC31C4A00C23A22 /* instaAd_places.png */,
 				FF2FEEBD1FC31C8300C23A22 /* instaAd_settings.png */,
@@ -325,12 +331,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF0A66E01FA7CB3E00F0392E /* IALoginViewController.xib in Resources */,
+				FF12F1D21FCD6BF8006B04BE /* instaAd_location.png in Resources */,
 				FF0A66EA1FA8F9A300F0392E /* GoogleService-Info.plist in Resources */,
 				FF2FEEBE1FC31C8300C23A22 /* instaAd_settings.png in Resources */,
 				FF606F681FCB25660043D003 /* IADetailsEventNameTableViewCell.xib in Resources */,
 				FF2FEEBC1FC31C4A00C23A22 /* instaAd_places.png in Resources */,
 				FF606F781FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib in Resources */,
 				FF32F2831FBCC1070066F3D1 /* IAHomeViewController.xib in Resources */,
+				FF12F1D01FCD6AD5006B04BE /* instaAd_calendar.png in Resources */,
 				FF32F2891FBCCAD80066F3D1 /* IADetailsViewController.xib in Resources */,
 				FF606F701FCB26140043D003 /* IADetailsEventDTPTableViewCell.xib in Resources */,
 				FF0A66DC1FA7CB1C00F0392E /* IARegistrationViewController.xib in Resources */,

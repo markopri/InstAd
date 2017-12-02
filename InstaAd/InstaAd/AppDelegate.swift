@@ -26,25 +26,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             let navigationControllerHome = UINavigationController();
             let homeViewController = IAHomeViewController();
+            homeViewController.title = "InstaAd";
             navigationControllerHome.viewControllers = [homeViewController];
+            navigationControllerHome.navigationBar.isTranslucent = false;
             navigationControllerHome.tabBarItem = UITabBarItem(title: "Home", image: UIImage (named: "instaAd_home"), selectedImage: nil);
 
             let navigationControllerFavourites = UINavigationController();
             let favouritesViewController = IAFavouritesViewController();
+            favouritesViewController.title = "Favourites";
             navigationControllerFavourites.viewControllers = [favouritesViewController];
+            navigationControllerFavourites.navigationBar.isTranslucent = false;
             navigationControllerFavourites.tabBarItem = UITabBarItem(title: "Favourites", image: UIImage (named: "instaAd_favourites"), selectedImage: nil);
 
             let navigationControllerPlaces = UINavigationController();
             let placesViewController = IAPlacesViewController();
+            placesViewController.title = "Places";
             navigationControllerPlaces.viewControllers = [placesViewController];
+            navigationControllerPlaces.navigationBar.isTranslucent = false;
             navigationControllerPlaces.tabBarItem = UITabBarItem(title: "Places", image: UIImage (named: "instaAd_places"), selectedImage: nil);
 
             let navigationControllerSettings = UINavigationController();
             let settingsViewController = IASettingsViewController();
+            settingsViewController.title = "Settings";
             navigationControllerSettings.viewControllers = [settingsViewController];
+            navigationControllerSettings.navigationBar.isTranslucent = false;
             navigationControllerSettings.tabBarItem = UITabBarItem(title: "Settings", image: UIImage (named: "instaAd_settings"), selectedImage: nil);
 
             let tabBar = UITabBarController();
+            tabBar.tabBar.isTranslucent = false;
+            tabBar.tabBar.barStyle = UIBarStyle.black;
             tabBar.viewControllers = [navigationControllerHome, navigationControllerFavourites, navigationControllerPlaces, navigationControllerSettings];
             window?.rootViewController = tabBar;
         }

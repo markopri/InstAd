@@ -16,12 +16,10 @@ class IARegistrationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     //MARK: Action methods
@@ -33,18 +31,24 @@ class IARegistrationViewController: UIViewController {
 
     //action when Register button is pressed
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        if (isRegistrationOk()){
+        if (isRegistrationOk())
+        {
             NSLog("Svi podaci kod registracije su uspješno uneseni");
 
             Auth.auth().createUser(withEmail: txtEmail.text!, password: txtPassword.text!, completion: {(user, error) in
-                if (user != nil){
+                if (user != nil)
+                {
                     NSLog("Korisnik je uspješno registriran");
                     UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: nil);
-                } else {
+                }
+                else
+                {
                     self.displayAlert(messageToDisplay: "Email je već zauzet!");
                 }
             })
-        } else {
+        }
+        else
+        {
             NSLog("Registracija neuspješna");
         }
     }
@@ -55,7 +59,8 @@ class IARegistrationViewController: UIViewController {
     func isAllFieldsEntered(enteredEmail : String, enteredPassword : String, enteredRepeatPassword : String) -> Bool {
         var returnValue = true;
 
-        if (enteredEmail.count == 0 || enteredPassword.count == 0 || enteredRepeatPassword.count == 0){
+        if (enteredEmail.count == 0 || enteredPassword.count == 0 || enteredRepeatPassword.count == 0)
+        {
             returnValue = false;
         }
 
@@ -65,19 +70,23 @@ class IARegistrationViewController: UIViewController {
     func isRegistrationOk() -> Bool {
         var returnValue = true;
 
-        if (!isAllFieldsEntered(enteredEmail: txtEmail.text!, enteredPassword: txtPassword.text!, enteredRepeatPassword: txtRepeatPassword.text!)){
+        if (!isAllFieldsEntered(enteredEmail: txtEmail.text!, enteredPassword: txtPassword.text!, enteredRepeatPassword: txtRepeatPassword.text!))
+        {
             returnValue = false;
             displayAlert(messageToDisplay: "All fields are required!");
         }
-        else if (!validationEmail(enteredEmail: txtEmail.text!)){
+        else if (!validationEmail(enteredEmail: txtEmail.text!))
+        {
             returnValue = false;
             displayAlert(messageToDisplay: "Entered email is not valid");
         }
-        else if (!validationPassword(enteredPassword: txtPassword.text!)){
+        else if (!validationPassword(enteredPassword: txtPassword.text!))
+        {
             returnValue = false;
             displayAlert(messageToDisplay: "Password must contain at least 1 uppercase letter, 1 lowercase letter, 1 number and must be at least 8 characters long!");
         }
-        else if (!isRepeatPasswordEqualsPassword(enteredPassword: txtPassword.text!, enteredRepeatPassword: txtRepeatPassword.text!)){
+        else if (!isRepeatPasswordEqualsPassword(enteredPassword: txtPassword.text!, enteredRepeatPassword: txtRepeatPassword.text!))
+        {
             returnValue = false;
             displayAlert(messageToDisplay: "Both psswords must be equal!");
         }
@@ -89,7 +98,8 @@ class IARegistrationViewController: UIViewController {
     func isRepeatPasswordEqualsPassword(enteredPassword : String, enteredRepeatPassword : String) -> Bool {
         var returnValue = true;
 
-        if (!enteredRepeatPassword.elementsEqual(enteredPassword)){
+        if (!enteredRepeatPassword.elementsEqual(enteredPassword))
+        {
             returnValue = false;
         }
 
