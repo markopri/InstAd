@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import MapKit
 
 class IADetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var eventToDisplay : Event!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,25 +55,31 @@ class IADetailsViewController: UIViewController, UITableViewDelegate, UITableVie
         {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventNameTableViewCell", for: indexPath) as! IADetailsEventNameTableViewCell;
-            cell.lblEventName.text = "Veceras premijera u kinu";
+            cell.lblEventName.text = eventToDisplay.eventName;
             return cell;
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventImageTableViewCell", for: indexPath) as! IADetailsEventImageTableViewCell;
-            cell.imgEventImage.image = UIImage (named: "instaAd_no_image_available");
+            if let url = NSURL(string: eventToDisplay.eventImage!)
+            {
+                if let data = try? Data (contentsOf: url as URL)
+                {
+                    cell.imgEventImage.image = UIImage(data: data)
+                }
+            }
             return cell;
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventDTPTableViewCell", for: indexPath) as! IADetailsEventDTPTableViewCell;
             cell.imgEventDTPIcon.image = UIImage (named: "instaAd_calendar");
-            cell.lblEventDTPValue.text = "31.12.2017. 22:00:00";
+            cell.lblEventDTPValue.text = eventToDisplay.eventStartDate;
             return cell;
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventDTPTableViewCell", for: indexPath) as! IADetailsEventDTPTableViewCell;
             cell.imgEventDTPIcon.image = UIImage (named: "instaAd_location");
-            cell.lblEventDTPValue.text = "Barfly, Varaždin";
+            cell.lblEventDTPValue.text = eventToDisplay.eventAddress;
             return cell;
         case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventDescriptionTableViewCell", for: indexPath) as! IADetailsEventDescriptionTableViewCell;
-            cell.txtEventDescription.text = "Ove godine dočekajte Novu godinu u Barflyu uz najbolju zabavu u gradu. Kako bismo Vam to omogućili zabavljat će nas Prljavo kazalište uz promotivne cijene pićaOve godine dočekajte Novu godinu u Barflyu uz najbolju zabavu u gradu. Kako bismo Vam to omogućili zabavljat će nas Prljavo kazalište uz promotivne cijene pića";
+            cell.txtEventDescription.text = eventToDisplay.eventDescription;
             return cell;
         case 5:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventMapTableViewCell", for: indexPath) as! IADetailsEventMapTableViewCell;

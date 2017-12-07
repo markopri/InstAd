@@ -54,6 +54,7 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pushViewController = IADetailsViewController();
+        pushViewController.eventToDisplay = eventList[indexPath.row];
         self.navigationController?.pushViewController(pushViewController, animated: true);
     }
 
@@ -61,7 +62,7 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func fetchEvents() -> Void {
         databaseReference = databaseReference.child("dogadaji");
         databaseReference.observe(.value, with: { (snapshot) in
-            
+
             if (snapshot.childrenCount > 0)
             {
                 self.eventList.removeAll();

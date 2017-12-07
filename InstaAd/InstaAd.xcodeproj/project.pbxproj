@@ -28,6 +28,8 @@
 		FF32F2891FBCCAD80066F3D1 /* IADetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32F2871FBCCAD80066F3D1 /* IADetailsViewController.xib */; };
 		FF32F28C1FBCCAF30066F3D1 /* IAFavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32F28A1FBCCAF30066F3D1 /* IAFavouritesViewController.swift */; };
 		FF32F28D1FBCCAF30066F3D1 /* IAFavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32F28B1FBCCAF30066F3D1 /* IAFavouritesViewController.xib */; };
+		FF34ADF11FD96542007D4592 /* instaAd_liked_place.png in Resources */ = {isa = PBXBuildFile; fileRef = FF34ADEF1FD96541007D4592 /* instaAd_liked_place.png */; };
+		FF34ADF21FD96542007D4592 /* instaAd_non_liked_place.png in Resources */ = {isa = PBXBuildFile; fileRef = FF34ADF01FD96541007D4592 /* instaAd_non_liked_place.png */; };
 		FF606F5E1FCAE2A00043D003 /* instaAd_no_image_available.png in Resources */ = {isa = PBXBuildFile; fileRef = FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */; };
 		FF606F621FCB18B20043D003 /* IAPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF606F601FCB18B20043D003 /* IAPlacesViewController.swift */; };
 		FF606F631FCB18B20043D003 /* IAPlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF606F611FCB18B20043D003 /* IAPlacesViewController.xib */; };
@@ -71,6 +73,8 @@
 		FF32F2871FBCCAD80066F3D1 /* IADetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IADetailsViewController.xib; sourceTree = "<group>"; };
 		FF32F28A1FBCCAF30066F3D1 /* IAFavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAFavouritesViewController.swift; sourceTree = "<group>"; };
 		FF32F28B1FBCCAF30066F3D1 /* IAFavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAFavouritesViewController.xib; sourceTree = "<group>"; };
+		FF34ADEF1FD96541007D4592 /* instaAd_liked_place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_liked_place.png; sourceTree = "<group>"; };
+		FF34ADF01FD96541007D4592 /* instaAd_non_liked_place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_non_liked_place.png; sourceTree = "<group>"; };
 		FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_no_image_available.png; sourceTree = "<group>"; };
 		FF606F601FCB18B20043D003 /* IAPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPlacesViewController.swift; sourceTree = "<group>"; };
 		FF606F611FCB18B20043D003 /* IAPlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAPlacesViewController.xib; sourceTree = "<group>"; };
@@ -154,8 +158,10 @@
 				FF12F1CF1FCD6AD5006B04BE /* instaAd_calendar.png */,
 				FF606F791FCC01640043D003 /* instaAd_favourites.png */,
 				FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */,
+				FF34ADEF1FD96541007D4592 /* instaAd_liked_place.png */,
 				FF12F1D11FCD6BF8006B04BE /* instaAd_location.png */,
 				FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */,
+				FF34ADF01FD96541007D4592 /* instaAd_non_liked_place.png */,
 				FF2FEEBB1FC31C4A00C23A22 /* instaAd_places.png */,
 				FF2FEEBD1FC31C8300C23A22 /* instaAd_settings.png */,
 			);
@@ -355,7 +361,9 @@
 				FF2FEEBE1FC31C8300C23A22 /* instaAd_settings.png in Resources */,
 				FF606F681FCB25660043D003 /* IADetailsEventNameTableViewCell.xib in Resources */,
 				FF2FEEBC1FC31C4A00C23A22 /* instaAd_places.png in Resources */,
+				FF34ADF11FD96542007D4592 /* instaAd_liked_place.png in Resources */,
 				FF606F781FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib in Resources */,
+				FF34ADF21FD96542007D4592 /* instaAd_non_liked_place.png in Resources */,
 				FF32F2831FBCC1070066F3D1 /* IAHomeViewController.xib in Resources */,
 				FF12F1D01FCD6AD5006B04BE /* instaAd_calendar.png in Resources */,
 				FF32F2891FBCCAD80066F3D1 /* IADetailsViewController.xib in Resources */,
