@@ -6,14 +6,20 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    var databaseReference : DatabaseReference!
+    var eventList = [Event]()
 
     override func viewDidLoad() {
         super.viewDidLoad();
-        //TODO first load all entries from database (in a function and save them in array)
+        databaseReference = Database.database().reference();
+        fetchEvents();
+        self.tableView.reloadData();
+
         tableView.register(UINib (nibName: "IAHomeTableViewCell", bundle: nil), forCellReuseIdentifier: "IAHomeTableViewCell");
     }
 
@@ -26,17 +32,22 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //TODO check how many entries is in json and then return that value
-        //TODO check how many entries is in database and then return that value (from array)
-        return 5;
+        return eventList.count;
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "IAHomeTableViewCell", for: indexPath) as! IAHomeTableViewCell
-        cell.imgEventImage.image = UIImage (named: "instaAd_no_image_available");
-        cell.lblEventName.text = "Prvi studentski party ove godine u Barfly-u";
-        cell.lblEventPlace.text = "Barfly";
-        cell.lblEventDateTime.text = "1.12.2018";
+
+        if let url = NSURL(string: eventList[indexPath.row].eventImage!)
+        {
+            if let data = try? Data (contentsOf: url as URL)
+            {
+                cell.imgEventImage.image = UIImage(data: data)
+            }
+        }
+        cell.lblEventName.text = eventList[indexPath.row].eventName;
+        cell.lblEventPlace.text = eventList[indexPath.row].eventAddress;
+        cell.lblEventDateTime.text = eventList[indexPath.row].eventStartDate;
 
         return cell;
     }
@@ -44,5 +55,34 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pushViewController = IADetailsViewController();
         self.navigationController?.pushViewController(pushViewController, animated: true);
+    }
+
+    //method for fetching values from database
+    func fetchEvents() -> Void {
+        databaseReference = databaseReference.child("dogadaji");
+        databaseReference.observe(.value, with: { (snapshot) in
+            
+            if (snapshot.childrenCount > 0)
+            {
+                self.eventList.removeAll();
+                for events in snapshot.children.allObjects as! [DataSnapshot]
+                {
+                    let eventObject = events.value as! [String: AnyObject];
+                    let event = Event();
+                    event.eventAddress = eventObject["adresa"] as? String;
+                    event.eventStartDate = eventObject["datum_pocetka"] as? String;
+                    event.eventEndDate = eventObject["datum_kraj"] as? String;
+                    event.eventLatitude = eventObject["latitude"] as? String;
+                    event.eventLongitude = eventObject["longitude"] as? String;
+                    event.eventName = eventObject["naziv"] as? String;
+                    event.eventDescription = eventObject["opis"] as? String;
+                    event.eventImage = eventObject["slika"] as? String;
+
+                    self.eventList.append(event);
+                }
+
+                self.tableView.reloadData();
+            }
+        });
     }
 }

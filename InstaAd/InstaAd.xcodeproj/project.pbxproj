@@ -42,6 +42,7 @@
 		FF606F771FCB263C0043D003 /* IADetailsEventMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF606F751FCB263C0043D003 /* IADetailsEventMapTableViewCell.swift */; };
 		FF606F781FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF606F761FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib */; };
 		FF606F7A1FCC01640043D003 /* instaAd_favourites.png in Resources */ = {isa = PBXBuildFile; fileRef = FF606F791FCC01640043D003 /* instaAd_favourites.png */; };
+		FF65E6011FD6EB6000F7B6BF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65E6001FD6EB6000F7B6BF /* Event.swift */; };
 		FFC9B6CD1FA2297100B78F9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9B6CC1FA2297100B78F9B /* AppDelegate.swift */; };
 		FFC9B6D61FA2297100B78F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC9B6D51FA2297100B78F9B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		FF606F751FCB263C0043D003 /* IADetailsEventMapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IADetailsEventMapTableViewCell.swift; sourceTree = "<group>"; };
 		FF606F761FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IADetailsEventMapTableViewCell.xib; sourceTree = "<group>"; };
 		FF606F791FCC01640043D003 /* instaAd_favourites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_favourites.png; sourceTree = "<group>"; };
+		FF65E6001FD6EB6000F7B6BF /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		FFC9B6C91FA2297100B78F9B /* InstaAd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaAd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC9B6CC1FA2297100B78F9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC9B6D51FA2297100B78F9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -216,6 +218,22 @@
 			path = DetailsCells;
 			sourceTree = "<group>";
 		};
+		FF65E5FE1FD6EB3800F7B6BF /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				FF65E5FF1FD6EB3800F7B6BF /* Entity */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		FF65E5FF1FD6EB3800F7B6BF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FF65E6001FD6EB6000F7B6BF /* Event.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		FFC9B6C01FA2297100B78F9B = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +257,7 @@
 			children = (
 				FFC9B6CC1FA2297100B78F9B /* AppDelegate.swift */,
 				FFC9B6D51FA2297100B78F9B /* Assets.xcassets */,
+				FF65E5FE1FD6EB3800F7B6BF /* DataSource */,
 				FFC9B6E11FA231E100B78F9B /* UI */,
 				FF2FEEB81FC319EC00C23A22 /* Resources */,
 				FFC9B6E01FA231B500B78F9B /* Suporting Files */,
@@ -426,6 +445,7 @@
 				FF32F2881FBCCAD80066F3D1 /* IADetailsViewController.swift in Sources */,
 				FF606F621FCB18B20043D003 /* IAPlacesViewController.swift in Sources */,
 				FF2FEEC51FC3289A00C23A22 /* IAHomeTableViewCell.swift in Sources */,
+				FF65E6011FD6EB6000F7B6BF /* Event.swift in Sources */,
 				FF606F6F1FCB26140043D003 /* IADetailsEventDTPTableViewCell.swift in Sources */,
 				FF606F671FCB25660043D003 /* IADetailsEventNameTableViewCell.swift in Sources */,
 				FF2FEEB61FC3179400C23A22 /* IASettingsViewController.swift in Sources */,
