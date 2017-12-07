@@ -83,6 +83,28 @@ class IADetailsViewController: UIViewController, UITableViewDelegate, UITableVie
             return cell;
         case 5:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventMapTableViewCell", for: indexPath) as! IADetailsEventMapTableViewCell;
+            var latitude = 0.0;
+            var longitude = 0.0;
+
+            if let eventLatitude = eventToDisplay.eventLatitude
+            {
+                latitude = Double(eventLatitude)!;
+            }
+            if let eventLongitude = eventToDisplay.eventLongitude
+            {
+                longitude = Double(eventLongitude)!;
+            }
+
+            let span:MKCoordinateSpan = MKCoordinateSpanMake(0.005, 0.005);
+            let eventLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude);
+            let eventRegion:MKCoordinateRegion = MKCoordinateRegionMake(eventLocation, span);
+            cell.mkEventMap.setRegion(eventRegion, animated: true);
+
+            let annotation = MKPointAnnotation();
+            annotation.coordinate = eventLocation;
+            annotation.title = "Place name";
+            cell.mkEventMap.addAnnotation(annotation);
+
             return cell;
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventNameTableViewCell", for: indexPath) as! IADetailsEventNameTableViewCell;
