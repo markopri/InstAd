@@ -30,6 +30,8 @@
 		FF32F28D1FBCCAF30066F3D1 /* IAFavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32F28B1FBCCAF30066F3D1 /* IAFavouritesViewController.xib */; };
 		FF34ADF11FD96542007D4592 /* instaAd_liked_place.png in Resources */ = {isa = PBXBuildFile; fileRef = FF34ADEF1FD96541007D4592 /* instaAd_liked_place.png */; };
 		FF34ADF21FD96542007D4592 /* instaAd_non_liked_place.png in Resources */ = {isa = PBXBuildFile; fileRef = FF34ADF01FD96541007D4592 /* instaAd_non_liked_place.png */; };
+		FF34ADF51FDA85D2007D4592 /* IAPlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34ADF31FDA85D2007D4592 /* IAPlacesTableViewCell.swift */; };
+		FF34ADF61FDA85D2007D4592 /* IAPlacesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF34ADF41FDA85D2007D4592 /* IAPlacesTableViewCell.xib */; };
 		FF606F5E1FCAE2A00043D003 /* instaAd_no_image_available.png in Resources */ = {isa = PBXBuildFile; fileRef = FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */; };
 		FF606F621FCB18B20043D003 /* IAPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF606F601FCB18B20043D003 /* IAPlacesViewController.swift */; };
 		FF606F631FCB18B20043D003 /* IAPlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF606F611FCB18B20043D003 /* IAPlacesViewController.xib */; };
@@ -75,6 +77,8 @@
 		FF32F28B1FBCCAF30066F3D1 /* IAFavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAFavouritesViewController.xib; sourceTree = "<group>"; };
 		FF34ADEF1FD96541007D4592 /* instaAd_liked_place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_liked_place.png; sourceTree = "<group>"; };
 		FF34ADF01FD96541007D4592 /* instaAd_non_liked_place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_non_liked_place.png; sourceTree = "<group>"; };
+		FF34ADF31FDA85D2007D4592 /* IAPlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPlacesTableViewCell.swift; sourceTree = "<group>"; };
+		FF34ADF41FDA85D2007D4592 /* IAPlacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAPlacesTableViewCell.xib; sourceTree = "<group>"; };
 		FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_no_image_available.png; sourceTree = "<group>"; };
 		FF606F601FCB18B20043D003 /* IAPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPlacesViewController.swift; sourceTree = "<group>"; };
 		FF606F611FCB18B20043D003 /* IAPlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAPlacesViewController.xib; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 			children = (
 				FF606F601FCB18B20043D003 /* IAPlacesViewController.swift */,
 				FF606F611FCB18B20043D003 /* IAPlacesViewController.xib */,
+				FF34ADF31FDA85D2007D4592 /* IAPlacesTableViewCell.swift */,
+				FF34ADF41FDA85D2007D4592 /* IAPlacesTableViewCell.xib */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				FF34ADF11FD96542007D4592 /* instaAd_liked_place.png in Resources */,
 				FF606F781FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib in Resources */,
 				FF34ADF21FD96542007D4592 /* instaAd_non_liked_place.png in Resources */,
+				FF34ADF61FDA85D2007D4592 /* IAPlacesTableViewCell.xib in Resources */,
 				FF32F2831FBCC1070066F3D1 /* IAHomeViewController.xib in Resources */,
 				FF12F1D01FCD6AD5006B04BE /* instaAd_calendar.png in Resources */,
 				FF32F2891FBCCAD80066F3D1 /* IADetailsViewController.xib in Resources */,
@@ -460,6 +467,7 @@
 				FFC9B6CD1FA2297100B78F9B /* AppDelegate.swift in Sources */,
 				FF606F771FCB263C0043D003 /* IADetailsEventMapTableViewCell.swift in Sources */,
 				FF606F731FCB26290043D003 /* IADetailsEventDescriptionTableViewCell.swift in Sources */,
+				FF34ADF51FDA85D2007D4592 /* IAPlacesTableViewCell.swift in Sources */,
 				FF0A66DF1FA7CB3E00F0392E /* IALoginViewController.swift in Sources */,
 				FF606F6B1FCB25CB0043D003 /* IADetailsEventImageTableViewCell.swift in Sources */,
 				FF0A66DB1FA7CB1C00F0392E /* IARegistrationViewController.swift in Sources */,

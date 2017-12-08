@@ -58,6 +58,8 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.navigationController?.pushViewController(pushViewController, animated: true);
     }
 
+    
+
     //method for fetching values from database
     func fetchEvents() -> Void {
         databaseReference = databaseReference.child("dogadaji");
