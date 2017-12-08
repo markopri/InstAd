@@ -49,6 +49,11 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.lblEventPlace.text = eventList[indexPath.row].eventAddress;
         cell.lblEventDateTime.text = eventList[indexPath.row].eventStartDate;
 
+        cell.layer.shadowOffset = CGSize (width: 1, height: 1)
+        cell.layer.cornerRadius = 5;
+        cell.layer.borderWidth = 3;
+        let borderColor = UIColor .brown;
+        cell.layer.borderColor = borderColor.cgColor;
         return cell;
     }
 
@@ -57,8 +62,6 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         pushViewController.eventToDisplay = eventList[indexPath.row];
         self.navigationController?.pushViewController(pushViewController, animated: true);
     }
-
-    
 
     //method for fetching values from database
     func fetchEvents() -> Void {
