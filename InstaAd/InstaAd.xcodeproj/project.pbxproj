@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4A91FCE737FC02645DF11C52 /* Pods_InstaAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2442D8F6C59D4C601CA39EC7 /* Pods_InstaAd.framework */; };
+		FF082F0F1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF082F0D1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift */; };
+		FF082F101FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF082F0E1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib */; };
+		FF082F131FDAC581003C4215 /* IASettingsButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF082F111FDAC581003C4215 /* IASettingsButtonTableViewCell.swift */; };
+		FF082F141FDAC581003C4215 /* IASettingsButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF082F121FDAC581003C4215 /* IASettingsButtonTableViewCell.xib */; };
 		FF0A66DB1FA7CB1C00F0392E /* IARegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A66D91FA7CB1C00F0392E /* IARegistrationViewController.swift */; };
 		FF0A66DC1FA7CB1C00F0392E /* IARegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0A66DA1FA7CB1C00F0392E /* IARegistrationViewController.xib */; };
 		FF0A66DF1FA7CB3E00F0392E /* IALoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A66DD1FA7CB3E00F0392E /* IALoginViewController.swift */; };
@@ -55,6 +59,10 @@
 		0B340A403BB323D82783D97B /* Pods-InstaAd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaAd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaAd/Pods-InstaAd.debug.xcconfig"; sourceTree = "<group>"; };
 		1F5E4B1710459467ED17A589 /* Pods-InstaAd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaAd.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaAd/Pods-InstaAd.release.xcconfig"; sourceTree = "<group>"; };
 		2442D8F6C59D4C601CA39EC7 /* Pods_InstaAd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaAd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF082F0D1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IASettingsUserDataTableViewCell.swift; sourceTree = "<group>"; };
+		FF082F0E1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IASettingsUserDataTableViewCell.xib; sourceTree = "<group>"; };
+		FF082F111FDAC581003C4215 /* IASettingsButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IASettingsButtonTableViewCell.swift; sourceTree = "<group>"; };
+		FF082F121FDAC581003C4215 /* IASettingsButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IASettingsButtonTableViewCell.xib; sourceTree = "<group>"; };
 		FF0A66D91FA7CB1C00F0392E /* IARegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IARegistrationViewController.swift; sourceTree = "<group>"; };
 		FF0A66DA1FA7CB1C00F0392E /* IARegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IARegistrationViewController.xib; sourceTree = "<group>"; };
 		FF0A66DD1FA7CB3E00F0392E /* IALoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IALoginViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +137,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FF082F0C1FDAC4E9003C4215 /* SettingsCells */ = {
+			isa = PBXGroup;
+			children = (
+				FF082F0D1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift */,
+				FF082F0E1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib */,
+				FF082F111FDAC581003C4215 /* IASettingsButtonTableViewCell.swift */,
+				FF082F121FDAC581003C4215 /* IASettingsButtonTableViewCell.xib */,
+			);
+			path = SettingsCells;
+			sourceTree = "<group>";
+		};
 		FF0A66D61FA7CACF00F0392E /* Registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +169,7 @@
 		FF2FEEB31FC3175B00C23A22 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				FF082F0C1FDAC4E9003C4215 /* SettingsCells */,
 				FF2FEEB41FC3179400C23A22 /* IASettingsViewController.swift */,
 				FF2FEEB51FC3179400C23A22 /* IASettingsViewController.xib */,
 			);
@@ -375,9 +395,11 @@
 				FF12F1D01FCD6AD5006B04BE /* instaAd_calendar.png in Resources */,
 				FF32F2891FBCCAD80066F3D1 /* IADetailsViewController.xib in Resources */,
 				FF606F701FCB26140043D003 /* IADetailsEventDTPTableViewCell.xib in Resources */,
+				FF082F141FDAC581003C4215 /* IASettingsButtonTableViewCell.xib in Resources */,
 				FF0A66DC1FA7CB1C00F0392E /* IARegistrationViewController.xib in Resources */,
 				FF2FEEBA1FC31B0A00C23A22 /* instaAd_home.png in Resources */,
 				FF32F28D1FBCCAF30066F3D1 /* IAFavouritesViewController.xib in Resources */,
+				FF082F101FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib in Resources */,
 				FF606F7A1FCC01640043D003 /* instaAd_favourites.png in Resources */,
 				FFC9B6D61FA2297100B78F9B /* Assets.xcassets in Resources */,
 				FF606F631FCB18B20043D003 /* IAPlacesViewController.xib in Resources */,
@@ -458,6 +480,7 @@
 			files = (
 				FF32F28C1FBCCAF30066F3D1 /* IAFavouritesViewController.swift in Sources */,
 				FF32F2881FBCCAD80066F3D1 /* IADetailsViewController.swift in Sources */,
+				FF082F131FDAC581003C4215 /* IASettingsButtonTableViewCell.swift in Sources */,
 				FF606F621FCB18B20043D003 /* IAPlacesViewController.swift in Sources */,
 				FF2FEEC51FC3289A00C23A22 /* IAHomeTableViewCell.swift in Sources */,
 				FF65E6011FD6EB6000F7B6BF /* Event.swift in Sources */,
@@ -469,6 +492,7 @@
 				FF606F731FCB26290043D003 /* IADetailsEventDescriptionTableViewCell.swift in Sources */,
 				FF34ADF51FDA85D2007D4592 /* IAPlacesTableViewCell.swift in Sources */,
 				FF0A66DF1FA7CB3E00F0392E /* IALoginViewController.swift in Sources */,
+				FF082F0F1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift in Sources */,
 				FF606F6B1FCB25CB0043D003 /* IADetailsEventImageTableViewCell.swift in Sources */,
 				FF0A66DB1FA7CB1C00F0392E /* IARegistrationViewController.swift in Sources */,
 				FF32F2821FBCC1070066F3D1 /* IAHomeViewController.swift in Sources */,
