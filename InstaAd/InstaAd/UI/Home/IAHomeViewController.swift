@@ -54,6 +54,7 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.layer.borderWidth = 3;
         let borderColor = UIColor .brown;
         cell.layer.borderColor = borderColor.cgColor;
+
         return cell;
     }
 
@@ -84,7 +85,15 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     event.eventDescription = eventObject["opis"] as? String;
                     event.eventImage = eventObject["slika"] as? String;
 
-                    self.eventList.append(event);
+                    let dateFormatter = DateFormatter();
+                    dateFormatter.dateFormat = "yyyy-MM-dd";
+                    let eventDate = dateFormatter.date(from: eventObject["datum_pocetka"] as! String);
+                    let currentDate = Date();
+
+                    if (eventDate! >= currentDate)
+                    {
+                        self.eventList.append(event);
+                    }
                 }
 
                 self.tableView.reloadData();

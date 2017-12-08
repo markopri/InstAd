@@ -102,7 +102,7 @@ class IADetailsViewController: UIViewController, UITableViewDelegate, UITableVie
 
             let annotation = MKPointAnnotation();
             annotation.coordinate = eventLocation;
-            annotation.title = "Place name";
+            annotation.title = eventToDisplay.eventAddress;
             cell.mkEventMap.addAnnotation(annotation);
 
             return cell;
