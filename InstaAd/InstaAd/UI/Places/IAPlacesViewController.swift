@@ -9,21 +9,19 @@ import UIKit
 import FirebaseDatabase
 
 class IAPlacesViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+   
     
+    @IBOutlet var placesViewTable: UITableView!
     var databaseReference : DatabaseReference!
     var placesList = [Place]()
 
-    
-    @IBOutlet var placesViewTable: UITableView!
-    
-    
-        
-
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         databaseReference = Database.database().reference();
-//        tu zoveš fetchPlaces
+        fetchPlaces()
+        self.placesViewTable.reloadData()
+        
+        placesViewTable.register(UINib (nibName: "IAPlacesTableViewCell", bundle: nil), forCellReuseIdentifier: "IAPlacesTableViewCell");
 
         // Do any additional setup after loading the view.
     }
@@ -31,6 +29,27 @@ class IAPlacesViewController: UIViewController,UITableViewDelegate, UITableViewD
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return placesList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = placesViewTable.dequeueReusableCell(withIdentifier: "IAPlacesTableViewCell", for: indexPath) as! IAPlacesTableViewCell
+        
+        cell.tableViewLabel.text = placesList[indexPath.row].placeName
+        
+        
+        
+        cell.tableViewLabel.shadowOffset = CGSize (width: 1, height: 1)
+        cell.layer.cornerRadius = 5
+        cell.layer.borderWidth = 3
+        let borderColor = UIColor .brown
+        cell.layer.borderColor = borderColor.cgColor
+        
+        return cell;
     }
     
     func fetchPlaces() -> Void {
@@ -60,15 +79,7 @@ class IAPlacesViewController: UIViewController,UITableViewDelegate, UITableViewD
     }
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return placesList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = placesViewTable.dequeueReusableCell(withIdentifier: "IAPlacesTableViewCell", for: indexPath) as! IAPlacesTableViewCell
-        return cell;
-   }
     
 
     /*
