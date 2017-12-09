@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		254897EB1FDC25EF00DD832A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254897EA1FDC25EF00DD832A /* Place.swift */; };
 		4A91FCE737FC02645DF11C52 /* Pods_InstaAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2442D8F6C59D4C601CA39EC7 /* Pods_InstaAd.framework */; };
 		FF082F0F1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF082F0D1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift */; };
 		FF082F101FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF082F0E1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib */; };
@@ -59,6 +60,7 @@
 		0B340A403BB323D82783D97B /* Pods-InstaAd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaAd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaAd/Pods-InstaAd.debug.xcconfig"; sourceTree = "<group>"; };
 		1F5E4B1710459467ED17A589 /* Pods-InstaAd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaAd.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaAd/Pods-InstaAd.release.xcconfig"; sourceTree = "<group>"; };
 		2442D8F6C59D4C601CA39EC7 /* Pods_InstaAd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaAd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		254897EA1FDC25EF00DD832A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		FF082F0D1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IASettingsUserDataTableViewCell.swift; sourceTree = "<group>"; };
 		FF082F0E1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IASettingsUserDataTableViewCell.xib; sourceTree = "<group>"; };
 		FF082F111FDAC581003C4215 /* IASettingsButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IASettingsButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				FF65E6001FD6EB6000F7B6BF /* Event.swift */,
+				254897EA1FDC25EF00DD832A /* Place.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF32F28C1FBCCAF30066F3D1 /* IAFavouritesViewController.swift in Sources */,
+				254897EB1FDC25EF00DD832A /* Place.swift in Sources */,
 				FF32F2881FBCCAD80066F3D1 /* IADetailsViewController.swift in Sources */,
 				FF082F131FDAC581003C4215 /* IASettingsButtonTableViewCell.swift in Sources */,
 				FF606F621FCB18B20043D003 /* IAPlacesViewController.swift in Sources */,

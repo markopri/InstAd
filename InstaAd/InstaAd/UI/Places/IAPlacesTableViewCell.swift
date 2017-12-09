@@ -9,6 +9,10 @@ import UIKit
 
 class IAPlacesTableViewCell: UITableViewCell {
 
+    @IBOutlet var tableViewLabel: UILabel!
+    @IBOutlet var tableViewBtn: UIButton!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
