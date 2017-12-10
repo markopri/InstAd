@@ -41,13 +41,13 @@ class IAPlacesViewController: UIViewController,UITableViewDelegate, UITableViewD
         
         cell.tableViewLabel.text = placesList[indexPath.row].placeName
         
+        if(indexPath.row%3==0){
+            cell.tableViewBtn.setBackgroundImage(UIImage (named: "instaAd_liked_place"), for: .normal)
+        }else{
+            cell.tableViewBtn.setBackgroundImage(UIImage (named: "instaAd_non_liked_place"), for: .normal)
+        }
         
         
-        cell.tableViewLabel.shadowOffset = CGSize (width: 1, height: 1)
-        cell.layer.cornerRadius = 5
-        cell.layer.borderWidth = 3
-        let borderColor = UIColor .brown
-        cell.layer.borderColor = borderColor.cgColor
         
         return cell;
     }
@@ -77,6 +77,12 @@ class IAPlacesViewController: UIViewController,UITableViewDelegate, UITableViewD
             }
         });
     }
+    
+    func isFavorite() -> Bool {
+        return true
+    }
+    
+    
     
     
 

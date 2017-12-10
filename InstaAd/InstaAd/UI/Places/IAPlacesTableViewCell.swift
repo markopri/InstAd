@@ -12,6 +12,8 @@ class IAPlacesTableViewCell: UITableViewCell {
     @IBOutlet var tableViewLabel: UILabel!
     @IBOutlet var tableViewBtn: UIButton!
     
+    @IBAction func pressedPlacesButton(_ sender: UIButton) {
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

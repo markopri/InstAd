@@ -26,10 +26,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyq-Yb-jM7">
-                        <rect key="frame" x="241" y="6" width="71" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="0.45472355103561568" blue="0.33274864088565148" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <state key="normal" title="Button"/>
+                        <rect key="frame" x="241" y="6" width="32" height="32"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <connections>
+                            <action selector="pressedPlacesButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yNz-67-HSx"/>
+                        </connections>
                     </button>
                 </subviews>
             </tableViewCellContentView>
