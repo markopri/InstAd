@@ -32,35 +32,49 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //return eventList.count;
+        return 1;
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
         return eventList.count;
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "IAHomeTableViewCell", for: indexPath) as! IAHomeTableViewCell
 
-        if let url = NSURL(string: eventList[indexPath.row].eventImage!)
+        if let url = NSURL(string: eventList[indexPath.section].eventImage!)
         {
             if let data = try? Data (contentsOf: url as URL)
             {
                 cell.imgEventImage.image = UIImage(data: data)
             }
         }
-        cell.lblEventName.text = eventList[indexPath.row].eventName;
-        cell.lblEventPlace.text = eventList[indexPath.row].eventAddress;
-        cell.lblEventDateTime.text = eventList[indexPath.row].eventStartDate;
+        cell.lblEventName.text = eventList[indexPath.section].eventName;
+        cell.lblEventPlace.text = eventList[indexPath.section].eventAddress;
+        cell.lblEventDateTime.text = eventList[indexPath.section].eventStartDate;
 
         cell.layer.shadowOffset = CGSize (width: 1, height: 1)
         cell.layer.cornerRadius = 5;
         cell.layer.borderWidth = 3;
-        let borderColor = UIColor .brown;
+        let borderColor = UIColor .black;
         cell.layer.borderColor = borderColor.cgColor;
 
         return cell;
     }
 
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if (section != 0)
+        {
+            return 10;
+        }
+
+        return 0;
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pushViewController = IADetailsViewController();
-        pushViewController.eventToDisplay = eventList[indexPath.row];
+        pushViewController.eventToDisplay = eventList[indexPath.section];
         self.navigationController?.pushViewController(pushViewController, animated: true);
     }
 
@@ -84,6 +98,7 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     event.eventName = eventObject["naziv"] as? String;
                     event.eventDescription = eventObject["opis"] as? String;
                     event.eventImage = eventObject["slika"] as? String;
+                    event.eventUrl = eventObject["url"] as? String;
 
                     let dateFormatter = DateFormatter();
                     dateFormatter.dateFormat = "yyyy-MM-dd";

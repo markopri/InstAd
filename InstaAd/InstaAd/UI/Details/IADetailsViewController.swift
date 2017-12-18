@@ -8,9 +8,10 @@
 import UIKit
 import MapKit
 
-class IADetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class IADetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var eventToDisplay : Event!
+    let locationManager = CLLocationManager();
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class IADetailsViewController: UIViewController, UITableViewDelegate, UITableVie
         case 0:
             return 44;
         case 1:
-            return 217;
+            return 280;
         case 2:
             return 44;
         case 3:
@@ -44,7 +45,7 @@ class IADetailsViewController: UIViewController, UITableViewDelegate, UITableVie
         case 4:
             return 100;
         case 5:
-            return 300;
+            return 307;
         default:
             return 44;
         }
@@ -79,7 +80,12 @@ class IADetailsViewController: UIViewController, UITableViewDelegate, UITableVie
             return cell;
         case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventDescriptionTableViewCell", for: indexPath) as! IADetailsEventDescriptionTableViewCell;
-            cell.txtEventDescription.text = eventToDisplay.eventDescription;
+
+            let attributedString = NSMutableAttributedString(string: eventToDisplay.eventDescription!);
+            attributedString.append(NSMutableAttributedString (string: " Više informacija o događaju pogledajte na sljedećem linku: "));
+            attributedString.append(NSMutableAttributedString (string: eventToDisplay.eventUrl!));
+
+            cell.txtEventDescription.attributedText = attributedString;
             return cell;
         case 5:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventMapTableViewCell", for: indexPath) as! IADetailsEventMapTableViewCell;
@@ -95,6 +101,7 @@ class IADetailsViewController: UIViewController, UITableViewDelegate, UITableVie
                 longitude = Double(eventLongitude)!;
             }
 
+            //Adding pin on map for event location
             let span:MKCoordinateSpan = MKCoordinateSpanMake(0.005, 0.005);
             let eventLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude);
             let eventRegion:MKCoordinateRegion = MKCoordinateRegionMake(eventLocation, span);
@@ -105,6 +112,7 @@ class IADetailsViewController: UIViewController, UITableViewDelegate, UITableVie
             annotation.title = eventToDisplay.eventAddress;
             cell.mkEventMap.addAnnotation(annotation);
 
+            cell.eventToDisplayDirection = eventToDisplay;
             return cell;
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IADetailsEventNameTableViewCell", for: indexPath) as! IADetailsEventNameTableViewCell;

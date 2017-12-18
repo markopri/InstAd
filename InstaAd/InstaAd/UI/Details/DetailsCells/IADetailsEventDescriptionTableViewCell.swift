@@ -9,7 +9,7 @@ import UIKit
 
 class IADetailsEventDescriptionTableViewCell: UITableViewCell {
     @IBOutlet weak var txtEventDescription: UITextView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -17,5 +17,4 @@ class IADetailsEventDescriptionTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
 }
