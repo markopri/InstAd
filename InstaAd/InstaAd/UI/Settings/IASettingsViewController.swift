@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class IASettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -187,10 +188,60 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     func changeUserPassword() -> Void {
-        NSLog("Method for changing user password in database");
+        let cellCurrentPassword = self.tableView.cellForRow(at: IndexPath (row: 0, section: 1)) as! IASettingsUserDataTableViewCell;
+        let cellNewPassword = self.tableView.cellForRow(at: IndexPath (row: 1, section: 1)) as! IASettingsUserDataTableViewCell;
+        let cellRepeatPassword = self.tableView.cellForRow(at: IndexPath (row: 2, section: 1)) as! IASettingsUserDataTableViewCell;
+
+        let currentPassword = cellCurrentPassword.txtUserDataValue.text;
+        let newPassword = cellNewPassword.txtUserDataValue.text;
+        let repeatPassword = cellRepeatPassword.txtUserDataValue.text;
+
+        if (newPassword == repeatPassword && newPassword != "")
+        {
+            let user = Auth.auth().currentUser;
+            let credential : AuthCredential;
+            credential = EmailAuthProvider.credential(withEmail: (user?.email)!, password: currentPassword!);
+
+            user?.reauthenticate(with: credential, completion: { (error) in
+                if (error != nil)
+                {
+                    NSLog("Pogreška prilikom reuatentificiranja korisnika");
+                }
+                else
+                {
+                    user?.updatePassword(to: newPassword!, completion: { (error) in
+                        if (error != nil)
+                        {
+                            NSLog("Dogodila se pogreška prilikom ažuriranja lozinke");
+                        }
+                        else
+                        {
+                            NSLog("Uspješno ažurirana lozinka");
+                        }
+                    })
+                }
+            })
+        }
+        else{
+            //TODO add alert message
+        }
+
+        cellCurrentPassword.txtUserDataValue.text = "";
+        cellNewPassword.txtUserDataValue.text = "";
+        cellRepeatPassword.txtUserDataValue.text = "";
     }
 
     func logout() -> Void {
-        NSLog("Method for logout");
+        do
+        {
+            try Auth.auth().signOut();
+            let appde = UIApplication.shared.delegate as! AppDelegate;
+            appde.showNavigation(action: "logout");
+        }
+        catch let error as NSError
+        {
+            NSLog("Dogodila se pogreška prilikom odjavljivanja korisnika iz aplikacije: ");
+            NSLog(error.localizedDescription);
+        }
     }
 }
