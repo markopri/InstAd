@@ -17,6 +17,7 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad();
         databaseReference = Database.database().reference();
+
         fetchEvents();
         self.tableView.reloadData();
 
@@ -32,7 +33,6 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return eventList.count;
         return 1;
     }
 

@@ -37,7 +37,6 @@
 		FF34ADF21FD96542007D4592 /* instaAd_non_liked_place.png in Resources */ = {isa = PBXBuildFile; fileRef = FF34ADF01FD96541007D4592 /* instaAd_non_liked_place.png */; };
 		FF34ADF51FDA85D2007D4592 /* IAPlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34ADF31FDA85D2007D4592 /* IAPlacesTableViewCell.swift */; };
 		FF34ADF61FDA85D2007D4592 /* IAPlacesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF34ADF41FDA85D2007D4592 /* IAPlacesTableViewCell.xib */; };
-		FF3CDE5C1FE80DD7009BD080 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3CDE5B1FE80DD7009BD080 /* Settings.swift */; };
 		FF606F5E1FCAE2A00043D003 /* instaAd_no_image_available.png in Resources */ = {isa = PBXBuildFile; fileRef = FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */; };
 		FF606F621FCB18B20043D003 /* IAPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF606F601FCB18B20043D003 /* IAPlacesViewController.swift */; };
 		FF606F631FCB18B20043D003 /* IAPlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF606F611FCB18B20043D003 /* IAPlacesViewController.xib */; };
@@ -90,7 +89,6 @@
 		FF34ADF01FD96541007D4592 /* instaAd_non_liked_place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_non_liked_place.png; sourceTree = "<group>"; };
 		FF34ADF31FDA85D2007D4592 /* IAPlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPlacesTableViewCell.swift; sourceTree = "<group>"; };
 		FF34ADF41FDA85D2007D4592 /* IAPlacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAPlacesTableViewCell.xib; sourceTree = "<group>"; };
-		FF3CDE5B1FE80DD7009BD080 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_no_image_available.png; sourceTree = "<group>"; };
 		FF606F601FCB18B20043D003 /* IAPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPlacesViewController.swift; sourceTree = "<group>"; };
 		FF606F611FCB18B20043D003 /* IAPlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAPlacesViewController.xib; sourceTree = "<group>"; };
@@ -267,7 +265,6 @@
 			children = (
 				FF65E6001FD6EB6000F7B6BF /* Event.swift */,
 				254897EA1FDC25EF00DD832A /* Place.swift */,
-				FF3CDE5B1FE80DD7009BD080 /* Settings.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -498,7 +495,6 @@
 				FF606F771FCB263C0043D003 /* IADetailsEventMapTableViewCell.swift in Sources */,
 				FF606F731FCB26290043D003 /* IADetailsEventDescriptionTableViewCell.swift in Sources */,
 				FF34ADF51FDA85D2007D4592 /* IAPlacesTableViewCell.swift in Sources */,
-				FF3CDE5C1FE80DD7009BD080 /* Settings.swift in Sources */,
 				FF0A66DF1FA7CB3E00F0392E /* IALoginViewController.swift in Sources */,
 				FF082F0F1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift in Sources */,
 				FF606F6B1FCB25CB0043D003 /* IADetailsEventImageTableViewCell.swift in Sources */,

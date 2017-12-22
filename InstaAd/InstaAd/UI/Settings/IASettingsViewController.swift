@@ -201,6 +201,7 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
         let userDatabaseReference = databaseReference.child("users").child((user?.uid)!).child("name");
         userDatabaseReference.setValue(userName);
         databaseUserName = userName!;
+        showAlertViewController(title: "Name changed", message: "Successfully changed name");
     }
 
     func changeUserPassword() -> Void {
@@ -222,6 +223,7 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
                 if (error != nil)
                 {
                     NSLog("Pogreška prilikom reuatentificiranja korisnika");
+                    self.showAlertViewController(title: "Error", message: "We occured error while trying reautheticate user. Please try again");
                 }
                 else
                 {
@@ -229,17 +231,19 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
                         if (error != nil)
                         {
                             NSLog("Dogodila se pogreška prilikom ažuriranja lozinke");
+                            self.showAlertViewController(title: "Error", message: "We occured error while trying to update password. Please try again");
                         }
                         else
                         {
                             NSLog("Uspješno ažurirana lozinka");
+                            self.showAlertViewController(title: "Password change", message: "Password has been changed successfully");
                         }
                     })
                 }
             })
         }
         else{
-            //TODO add alert message
+            self.showAlertViewController(title: "Error", message: "New password and repeated password are not equal");
         }
 
         cellCurrentPassword.txtUserDataValue.text = "";
@@ -271,5 +275,13 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
             self.databaseUserName = (snapshot.value as? String)!;
             self.tableView.reloadData();
         });
+    }
+
+    func showAlertViewController(title: String, message: String) -> Void {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert);
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil);
+        alertController.addAction(okAction);
+
+        self.present(alertController, animated: true, completion: nil);
     }
 }
