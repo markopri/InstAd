@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class IARegistrationViewController: UIViewController {
 
@@ -39,6 +40,12 @@ class IARegistrationViewController: UIViewController {
                 if (user != nil)
                 {
                     NSLog("Korisnik je uspješno registriran");
+                    var databaseRefernece : DatabaseReference!;
+                    databaseRefernece = Database.database().reference();
+
+                    let userDatabaseReference = databaseRefernece.child("users").child((user?.uid)!).child("name");
+                    userDatabaseReference.setValue("");
+
                     UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: nil);
                 }
                 else

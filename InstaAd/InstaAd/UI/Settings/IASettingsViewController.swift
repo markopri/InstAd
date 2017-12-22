@@ -7,17 +7,21 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class IASettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    var databaseReference : DatabaseReference!;
+    var databaseUserName = "";
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        fetchEvents();
+        self.tableView.reloadData();
+
         tableView.register(UINib (nibName: "IASettingsUserDataTableViewCell", bundle: nil), forCellReuseIdentifier: "IASettingsUserDataTableViewCell");
         tableView.register(UINib (nibName: "IASettingsButtonTableViewCell", bundle: nil), forCellReuseIdentifier: "IASettingsButtonTableViewCell");
-
-        view.backgroundColor = UIColor .green;
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,12 +69,15 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (indexPath.section == 0)
         {
+            let user = Auth.auth().currentUser;
+            databaseReference = Database.database().reference();
+
             if (indexPath.row == 0)
             {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "IASettingsUserDataTableViewCell", for: indexPath) as! IASettingsUserDataTableViewCell;
                 cell.lblUserDataLabel.text = "Email";
                 editSettingsUserDataTableViewCell(cell: cell);
-                cell.txtUserDataValue.text = "user email from firebase";
+                cell.txtUserDataValue.text = user?.email;
                 cell.txtUserDataValue.isEnabled = false;
                 return cell;
             }
@@ -79,15 +86,17 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
                 let cell = tableView.dequeueReusableCell(withIdentifier: "IASettingsUserDataTableViewCell", for: indexPath) as! IASettingsUserDataTableViewCell;
                 cell.lblUserDataLabel.text = "Registration date";
                 editSettingsUserDataTableViewCell(cell: cell);
-                cell.txtUserDataValue.text = "Date of registration from firebase";
+                
+                cell.txtUserDataValue.text = user?.metadata.creationDate?.description;
                 cell.txtUserDataValue.isEnabled = false;
                 return cell;
             }
             else if (indexPath.row == 2)
             {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "IASettingsUserDataTableViewCell", for: indexPath) as! IASettingsUserDataTableViewCell;
-                cell.lblUserDataLabel.text = "Username";
+                cell.lblUserDataLabel.text = "Name";
                 editSettingsUserDataTableViewCell(cell: cell);
+                cell.txtUserDataValue.text = databaseUserName;
                 return cell;
             }
             else{
@@ -184,7 +193,14 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     func changeUserName() -> Void {
-        NSLog("Method for changing user name in database");
+        let cellUserName = self.tableView.cellForRow(at: IndexPath (row: 2, section: 0)) as! IASettingsUserDataTableViewCell;
+        let userName = cellUserName.txtUserDataValue.text;
+
+        let user = Auth.auth().currentUser;
+        databaseReference = Database.database().reference();
+        let userDatabaseReference = databaseReference.child("users").child((user?.uid)!).child("name");
+        userDatabaseReference.setValue(userName);
+        databaseUserName = userName!;
     }
 
     func changeUserPassword() -> Void {
@@ -243,5 +259,17 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
             NSLog("Dogodila se pogreška prilikom odjavljivanja korisnika iz aplikacije: ");
             NSLog(error.localizedDescription);
         }
+    }
+
+    //method for fetching values from database
+    func fetchEvents() -> Void {
+        let user = Auth.auth().currentUser;
+        databaseReference = Database.database().reference();
+        databaseReference = databaseReference.child("users").child((user?.uid)!).child("name");
+
+        databaseReference.observe(.value, with: { (snapshot) in
+            self.databaseUserName = (snapshot.value as? String)!;
+            self.tableView.reloadData();
+        });
     }
 }
