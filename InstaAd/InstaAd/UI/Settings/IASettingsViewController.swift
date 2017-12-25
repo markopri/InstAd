@@ -213,37 +213,45 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
         let newPassword = cellNewPassword.txtUserDataValue.text;
         let repeatPassword = cellRepeatPassword.txtUserDataValue.text;
 
-        if (newPassword == repeatPassword && newPassword != "")
+        if (validationPassword(enteredPassword: newPassword!))
         {
-            let user = Auth.auth().currentUser;
-            let credential : AuthCredential;
-            credential = EmailAuthProvider.credential(withEmail: (user?.email)!, password: currentPassword!);
+            if (newPassword == repeatPassword && newPassword != "")
+            {
+                let user = Auth.auth().currentUser;
+                let credential : AuthCredential;
+                credential = EmailAuthProvider.credential(withEmail: (user?.email)!, password: currentPassword!);
 
-            user?.reauthenticate(with: credential, completion: { (error) in
-                if (error != nil)
-                {
-                    NSLog("Pogreška prilikom reuatentificiranja korisnika");
-                    self.showAlertViewController(title: "Error", message: "We occured error while trying reautheticate user. Please try again");
-                }
-                else
-                {
-                    user?.updatePassword(to: newPassword!, completion: { (error) in
-                        if (error != nil)
-                        {
-                            NSLog("Dogodila se pogreška prilikom ažuriranja lozinke");
-                            self.showAlertViewController(title: "Error", message: "We occured error while trying to update password. Please try again");
-                        }
-                        else
-                        {
-                            NSLog("Uspješno ažurirana lozinka");
-                            self.showAlertViewController(title: "Password change", message: "Password has been changed successfully");
-                        }
-                    })
-                }
-            })
+                user?.reauthenticate(with: credential, completion: { (error) in
+                    if (error != nil)
+                    {
+                        NSLog("Pogreška prilikom reuatentificiranja korisnika");
+                        self.showAlertViewController(title: "Error", message: "We occured error while trying reautheticate user. Please try again");
+                    }
+                    else
+                    {
+                        user?.updatePassword(to: newPassword!, completion: { (error) in
+                            if (error != nil)
+                            {
+                                NSLog("Dogodila se pogreška prilikom ažuriranja lozinke");
+                                self.showAlertViewController(title: "Error", message: "We occured error while trying to update password. Please try again");
+                            }
+                            else
+                            {
+                                NSLog("Uspješno ažurirana lozinka");
+                                self.showAlertViewController(title: "Password change", message: "Password has been changed successfully");
+                            }
+                        })
+                    }
+                })
+            }
+            else{
+                self.showAlertViewController(title: "Error", message: "New password and repeated password are not equal");
+            }
         }
-        else{
-            self.showAlertViewController(title: "Error", message: "New password and repeated password are not equal");
+        else
+        {
+            NSLog("Format unesene nove lozinke nije valjan");
+            self.showAlertViewController(title: "Error", message: "Password must contain at least 1 uppercase letter, 1 lowercase letter, 1 number and must be at least 8 characters long!")
         }
 
         cellCurrentPassword.txtUserDataValue.text = "";
@@ -283,5 +291,16 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
         alertController.addAction(okAction);
 
         self.present(alertController, animated: true, completion: nil);
+    }
+
+    //password validation function (1 uppercase, 1 lowercase, 1 number, min. 8 characters)
+    func validationPassword(enteredPassword : String) -> Bool {
+        var returnValue = true;
+        let passwordRegex = "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}";
+
+        let passwordTest = NSPredicate(format:"SELF MATCHES %@", passwordRegex);
+        returnValue = passwordTest.evaluate(with: enteredPassword);
+
+        return returnValue;
     }
 }

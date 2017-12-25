@@ -99,6 +99,7 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     event.eventDescription = eventObject["opis"] as? String;
                     event.eventImage = eventObject["slika"] as? String;
                     event.eventUrl = eventObject["url"] as? String;
+                    event.eventObject = eventObject["objekt"] as? String;
 
                     let dateFormatter = DateFormatter();
                     dateFormatter.dateFormat = "yyyy-MM-dd";

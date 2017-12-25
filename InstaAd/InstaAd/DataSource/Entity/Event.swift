@@ -18,4 +18,5 @@ class Event: NSObject {
     var eventDescription : String?
     var eventImage : String?
     var eventUrl : String?
+    var eventObject : String?
 }
