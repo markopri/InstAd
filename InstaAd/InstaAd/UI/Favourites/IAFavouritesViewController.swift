@@ -105,6 +105,14 @@ class IAFavouritesViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (favouritesEventList.count > 0){
+            let pushViewController = IADetailsViewController();
+            pushViewController.eventToDisplay = favouritesEventList[indexPath.section];
+            self.navigationController?.pushViewController(pushViewController, animated: true);
+        }
+    }
+
     //methods for fetching values from database
     func fetchUserFavouritePlaces() -> Void {
         let user = Auth.auth().currentUser;
