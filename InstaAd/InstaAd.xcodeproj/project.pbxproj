@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		254897EB1FDC25EF00DD832A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254897EA1FDC25EF00DD832A /* Place.swift */; };
 		4A91FCE737FC02645DF11C52 /* Pods_InstaAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2442D8F6C59D4C601CA39EC7 /* Pods_InstaAd.framework */; };
+		FF0440F01FF3A6B300BDCCF7 /* instaAd_home_login.png in Resources */ = {isa = PBXBuildFile; fileRef = FF0440EF1FF3A6B300BDCCF7 /* instaAd_home_login.png */; };
 		FF082F0F1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF082F0D1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift */; };
 		FF082F101FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF082F0E1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib */; };
 		FF082F131FDAC581003C4215 /* IASettingsButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF082F111FDAC581003C4215 /* IASettingsButtonTableViewCell.swift */; };
@@ -63,6 +64,7 @@
 		1F5E4B1710459467ED17A589 /* Pods-InstaAd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaAd.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaAd/Pods-InstaAd.release.xcconfig"; sourceTree = "<group>"; };
 		2442D8F6C59D4C601CA39EC7 /* Pods_InstaAd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaAd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		254897EA1FDC25EF00DD832A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		FF0440EF1FF3A6B300BDCCF7 /* instaAd_home_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_home_login.png; sourceTree = "<group>"; };
 		FF082F0D1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IASettingsUserDataTableViewCell.swift; sourceTree = "<group>"; };
 		FF082F0E1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IASettingsUserDataTableViewCell.xib; sourceTree = "<group>"; };
 		FF082F111FDAC581003C4215 /* IASettingsButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IASettingsButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				FF12F1CF1FCD6AD5006B04BE /* instaAd_calendar.png */,
 				FF606F791FCC01640043D003 /* instaAd_favourites.png */,
 				FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */,
+				FF0440EF1FF3A6B300BDCCF7 /* instaAd_home_login.png */,
 				FF34ADEF1FD96541007D4592 /* instaAd_liked_place.png */,
 				FF12F1D11FCD6BF8006B04BE /* instaAd_location.png */,
 				FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */,
@@ -397,6 +400,7 @@
 				FF2FEEBE1FC31C8300C23A22 /* instaAd_settings.png in Resources */,
 				FF606F681FCB25660043D003 /* IADetailsEventNameTableViewCell.xib in Resources */,
 				FF2FEEBC1FC31C4A00C23A22 /* instaAd_places.png in Resources */,
+				FF0440F01FF3A6B300BDCCF7 /* instaAd_home_login.png in Resources */,
 				FF34ADF11FD96542007D4592 /* instaAd_liked_place.png in Resources */,
 				FF606F781FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib in Resources */,
 				FF34ADF21FD96542007D4592 /* instaAd_non_liked_place.png in Resources */,

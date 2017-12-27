@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -22,10 +23,23 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.reloadData();
 
         tableView.register(UINib (nibName: "IAHomeTableViewCell", bundle: nil), forCellReuseIdentifier: "IAHomeTableViewCell");
+
+        //redirect user to login page if it's not logged in
+        let user = Auth.auth().currentUser;
+        if (user == nil)
+        {
+            let loginButton = UIBarButtonItem (image: UIImage (named: "instaAd_home_login"), style: .plain, target: self, action: #selector(IAHomeViewController.goToLoginPage));
+            self.navigationItem.rightBarButtonItem = loginButton;
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    @objc func goToLoginPage() -> Void {
+        let pushViewController = IALoginViewController();
+        self.navigationController?.pushViewController(pushViewController, animated: true);
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
