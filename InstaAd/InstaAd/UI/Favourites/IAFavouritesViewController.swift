@@ -106,7 +106,8 @@ class IAFavouritesViewController: UIViewController, UITableViewDelegate, UITable
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if (favouritesEventList.count > 0){
+        if (favouritesEventList.count > 0)
+        {
             let pushViewController = IADetailsViewController();
             pushViewController.eventToDisplay = favouritesEventList[indexPath.section];
             self.navigationController?.pushViewController(pushViewController, animated: true);

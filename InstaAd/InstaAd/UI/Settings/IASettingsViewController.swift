@@ -86,8 +86,14 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
                 let cell = tableView.dequeueReusableCell(withIdentifier: "IASettingsUserDataTableViewCell", for: indexPath) as! IASettingsUserDataTableViewCell;
                 cell.lblUserDataLabel.text = "Registration date";
                 editSettingsUserDataTableViewCell(cell: cell);
-                
-                cell.txtUserDataValue.text = user?.metadata.creationDate?.description;
+
+                var result = "";
+                let dateOfRegistration = user?.metadata.creationDate?.description;
+                if let start = dateOfRegistration?.index((dateOfRegistration?.startIndex)!, offsetBy: 0), let end = dateOfRegistration?.index((dateOfRegistration?.endIndex)!, offsetBy: -5){
+                    result = String(dateOfRegistration![start..<end])
+                }
+
+                cell.txtUserDataValue.text = result;
                 cell.txtUserDataValue.isEnabled = false;
                 return cell;
             }
