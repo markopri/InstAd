@@ -10,6 +10,11 @@
 		254897EB1FDC25EF00DD832A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254897EA1FDC25EF00DD832A /* Place.swift */; };
 		4A91FCE737FC02645DF11C52 /* Pods_InstaAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2442D8F6C59D4C601CA39EC7 /* Pods_InstaAd.framework */; };
 		FF0440F01FF3A6B300BDCCF7 /* instaAd_home_login.png in Resources */ = {isa = PBXBuildFile; fileRef = FF0440EF1FF3A6B300BDCCF7 /* instaAd_home_login.png */; };
+		FF0440F21FF3CE7E00BDCCF7 /* instaAd_about.png in Resources */ = {isa = PBXBuildFile; fileRef = FF0440F11FF3CE7D00BDCCF7 /* instaAd_about.png */; };
+		FF0440F61FF3DC0600BDCCF7 /* IAAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0440F41FF3DC0600BDCCF7 /* IAAboutViewController.swift */; };
+		FF0440F71FF3DC0600BDCCF7 /* IAAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0440F51FF3DC0600BDCCF7 /* IAAboutViewController.xib */; };
+		FF0440FA1FF3DE3200BDCCF7 /* IAAbuoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0440F81FF3DE3200BDCCF7 /* IAAbuoutTableViewCell.swift */; };
+		FF0440FB1FF3DE3200BDCCF7 /* IAAbuoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0440F91FF3DE3200BDCCF7 /* IAAbuoutTableViewCell.xib */; };
 		FF082F0F1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF082F0D1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift */; };
 		FF082F101FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF082F0E1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib */; };
 		FF082F131FDAC581003C4215 /* IASettingsButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF082F111FDAC581003C4215 /* IASettingsButtonTableViewCell.swift */; };
@@ -65,6 +70,11 @@
 		2442D8F6C59D4C601CA39EC7 /* Pods_InstaAd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaAd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		254897EA1FDC25EF00DD832A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		FF0440EF1FF3A6B300BDCCF7 /* instaAd_home_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_home_login.png; sourceTree = "<group>"; };
+		FF0440F11FF3CE7D00BDCCF7 /* instaAd_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_about.png; sourceTree = "<group>"; };
+		FF0440F41FF3DC0600BDCCF7 /* IAAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAAboutViewController.swift; sourceTree = "<group>"; };
+		FF0440F51FF3DC0600BDCCF7 /* IAAboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAAboutViewController.xib; sourceTree = "<group>"; };
+		FF0440F81FF3DE3200BDCCF7 /* IAAbuoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAAbuoutTableViewCell.swift; sourceTree = "<group>"; };
+		FF0440F91FF3DE3200BDCCF7 /* IAAbuoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAAbuoutTableViewCell.xib; sourceTree = "<group>"; };
 		FF082F0D1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IASettingsUserDataTableViewCell.swift; sourceTree = "<group>"; };
 		FF082F0E1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IASettingsUserDataTableViewCell.xib; sourceTree = "<group>"; };
 		FF082F111FDAC581003C4215 /* IASettingsButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IASettingsButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -145,6 +155,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FF0440F31FF3DBEA00BDCCF7 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				FF0440F41FF3DC0600BDCCF7 /* IAAboutViewController.swift */,
+				FF0440F51FF3DC0600BDCCF7 /* IAAboutViewController.xib */,
+				FF0440F81FF3DE3200BDCCF7 /* IAAbuoutTableViewCell.swift */,
+				FF0440F91FF3DE3200BDCCF7 /* IAAbuoutTableViewCell.xib */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		FF082F0C1FDAC4E9003C4215 /* SettingsCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +208,7 @@
 		FF2FEEB81FC319EC00C23A22 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FF0440F11FF3CE7D00BDCCF7 /* instaAd_about.png */,
 				FF12F1CF1FCD6AD5006B04BE /* instaAd_calendar.png */,
 				FF606F791FCC01640043D003 /* instaAd_favourites.png */,
 				FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */,
@@ -321,6 +343,7 @@
 		FFC9B6E11FA231E100B78F9B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FF0440F31FF3DBEA00BDCCF7 /* About */,
 				FF32F2841FBCCAC30066F3D1 /* Details */,
 				FF32F2851FBCCAC30066F3D1 /* Favourites */,
 				FF32F27F1FBCC0E40066F3D1 /* Home */,
@@ -400,10 +423,12 @@
 				FF2FEEBE1FC31C8300C23A22 /* instaAd_settings.png in Resources */,
 				FF606F681FCB25660043D003 /* IADetailsEventNameTableViewCell.xib in Resources */,
 				FF2FEEBC1FC31C4A00C23A22 /* instaAd_places.png in Resources */,
+				FF0440FB1FF3DE3200BDCCF7 /* IAAbuoutTableViewCell.xib in Resources */,
 				FF0440F01FF3A6B300BDCCF7 /* instaAd_home_login.png in Resources */,
 				FF34ADF11FD96542007D4592 /* instaAd_liked_place.png in Resources */,
 				FF606F781FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib in Resources */,
 				FF34ADF21FD96542007D4592 /* instaAd_non_liked_place.png in Resources */,
+				FF0440F71FF3DC0600BDCCF7 /* IAAboutViewController.xib in Resources */,
 				FF34ADF61FDA85D2007D4592 /* IAPlacesTableViewCell.xib in Resources */,
 				FF32F2831FBCC1070066F3D1 /* IAHomeViewController.xib in Resources */,
 				FF12F1D01FCD6AD5006B04BE /* instaAd_calendar.png in Resources */,
@@ -413,6 +438,7 @@
 				FF0A66DC1FA7CB1C00F0392E /* IARegistrationViewController.xib in Resources */,
 				FF2FEEBA1FC31B0A00C23A22 /* instaAd_home.png in Resources */,
 				FF32F28D1FBCCAF30066F3D1 /* IAFavouritesViewController.xib in Resources */,
+				FF0440F21FF3CE7E00BDCCF7 /* instaAd_about.png in Resources */,
 				FF082F101FDAC53D003C4215 /* IASettingsUserDataTableViewCell.xib in Resources */,
 				FF606F7A1FCC01640043D003 /* instaAd_favourites.png in Resources */,
 				FFC9B6D61FA2297100B78F9B /* Assets.xcassets in Resources */,
@@ -496,6 +522,7 @@
 				254897EB1FDC25EF00DD832A /* Place.swift in Sources */,
 				FF32F2881FBCCAD80066F3D1 /* IADetailsViewController.swift in Sources */,
 				FF082F131FDAC581003C4215 /* IASettingsButtonTableViewCell.swift in Sources */,
+				FF0440F61FF3DC0600BDCCF7 /* IAAboutViewController.swift in Sources */,
 				FF606F621FCB18B20043D003 /* IAPlacesViewController.swift in Sources */,
 				FF2FEEC51FC3289A00C23A22 /* IAHomeTableViewCell.swift in Sources */,
 				FF65E6011FD6EB6000F7B6BF /* Event.swift in Sources */,
@@ -510,6 +537,7 @@
 				FF082F0F1FDAC53D003C4215 /* IASettingsUserDataTableViewCell.swift in Sources */,
 				FF606F6B1FCB25CB0043D003 /* IADetailsEventImageTableViewCell.swift in Sources */,
 				FF0A66DB1FA7CB1C00F0392E /* IARegistrationViewController.swift in Sources */,
+				FF0440FA1FF3DE3200BDCCF7 /* IAAbuoutTableViewCell.swift in Sources */,
 				FF32F2821FBCC1070066F3D1 /* IAHomeViewController.swift in Sources */,
 				FF1B63E01FF0F87600684C85 /* IAFavouritesEmptyTableViewCell.swift in Sources */,
 			);

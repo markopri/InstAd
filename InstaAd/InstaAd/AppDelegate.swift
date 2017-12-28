@@ -78,10 +78,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             navigationControllerSettings.navigationBar.isTranslucent = false;
             navigationControllerSettings.tabBarItem = UITabBarItem(title: "Settings", image: UIImage (named: "instaAd_settings"), selectedImage: nil);
 
+            let navigationControllerAbout = UINavigationController();
+            let aboutViewController = IAAboutViewController();
+            aboutViewController.title = "About";
+            navigationControllerAbout.viewControllers = [aboutViewController];
+            navigationControllerAbout.navigationBar.isTranslucent = false;
+            navigationControllerAbout.tabBarItem = UITabBarItem (title: "About", image: UIImage (named: "instaAd_about"), selectedImage: nil);
+
             let tabBar = UITabBarController();
             tabBar.tabBar.isTranslucent = false;
             tabBar.tabBar.barStyle = UIBarStyle.black;
-            tabBar.viewControllers = [navigationControllerHome, navigationControllerFavourites, navigationControllerPlaces, navigationControllerSettings];
+            tabBar.viewControllers = [navigationControllerHome, navigationControllerFavourites, navigationControllerPlaces, navigationControllerSettings, navigationControllerAbout];
             window?.rootViewController = tabBar;
         }
         else if (action == "skip")
