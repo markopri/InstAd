@@ -122,7 +122,32 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
                     if (eventDate! >= currentDate)
                     {
-                        self.eventList.append(event);
+                        //self.eventList.append(event);
+                        var position = -1;
+                        var isInserted = false;
+                        if (self.eventList.count > 0)
+                        {
+                            for selectedEvent in self.eventList
+                            {
+                                position = position + 1;
+                                let selectedEventDate = dateFormatter.date(from: selectedEvent.eventStartDate!);
+                                if ((selectedEventDate?.compare(eventDate!)) == .orderedDescending)
+                                {
+                                    self.eventList.insert(event, at: position);
+                                    isInserted = true;
+                                    break;
+                                }
+                            }
+
+                            if (!isInserted)
+                            {
+                                self.eventList.append(event);
+                            }
+                        }
+                        else
+                        {
+                            self.eventList.insert(event, at: 0);
+                        }
                     }
                 }
 
