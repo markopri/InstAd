@@ -12,6 +12,7 @@ class IAAboutViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none;
 
         tableView.register(UINib (nibName: "IAAbuoutTableViewCell", bundle: nil), forCellReuseIdentifier: "IAAbuoutTableViewCell");
     }

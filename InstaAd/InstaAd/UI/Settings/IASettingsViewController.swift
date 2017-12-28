@@ -16,6 +16,7 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none;
 
         fetchEvents();
         self.tableView.reloadData();

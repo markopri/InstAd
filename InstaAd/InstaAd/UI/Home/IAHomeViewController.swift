@@ -17,6 +17,7 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad();
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none;
         databaseReference = Database.database().reference();
 
         fetchEvents();

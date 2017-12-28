@@ -19,6 +19,7 @@ class IAFavouritesViewController: UIViewController, UITableViewDelegate, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none;
         databaseReference = Database.database().reference();
 
         fetchUserFavouritePlaces();
