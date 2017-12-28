@@ -179,8 +179,31 @@ class IAFavouritesViewController: UIViewController, UITableViewDelegate, UITable
 
                         if (validEvent == true)
                         {
-                            self.favouritesEventList.append(event);
-                            self.tableView.reloadData()
+                            var position = -1;
+                            var isInserted = false;
+                            if (self.favouritesEventList.count > 0)
+                            {
+                                for selectedEvent in self.favouritesEventList
+                                {
+                                    position = position + 1;
+                                    let selectedEventDate = dateFormatter.date(from: selectedEvent.eventStartDate!);
+                                    if ((selectedEventDate?.compare(eventDate!)) == .orderedDescending)
+                                    {
+                                        self.favouritesEventList.insert(event, at: position);
+                                        isInserted = true;
+                                        break;
+                                    }
+                                }
+
+                                if (!isInserted)
+                                {
+                                    self.favouritesEventList.append(event);
+                                }
+                            }
+                            else
+                            {
+                                self.favouritesEventList.insert(event, at: 0);
+                            }
                         }
                     }
                 }

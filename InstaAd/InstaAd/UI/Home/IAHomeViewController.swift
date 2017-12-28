@@ -122,7 +122,6 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
                     if (eventDate! >= currentDate)
                     {
-                        //self.eventList.append(event);
                         var position = -1;
                         var isInserted = false;
                         if (self.eventList.count > 0)
