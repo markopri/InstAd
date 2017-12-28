@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class IASettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class IASettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate{
     @IBOutlet weak var tableView: UITableView!
     var databaseReference : DatabaseReference!;
     var databaseUserName = "";
@@ -104,6 +104,7 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
                 cell.lblUserDataLabel.text = "Name";
                 editSettingsUserDataTableViewCell(cell: cell);
                 cell.txtUserDataValue.text = databaseUserName;
+                cell.txtUserDataValue.delegate = self;
                 return cell;
             }
             else{
@@ -124,6 +125,7 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
                 let cell = tableView.dequeueReusableCell(withIdentifier: "IASettingsUserDataTableViewCell", for: indexPath) as! IASettingsUserDataTableViewCell;
                 cell.lblUserDataLabel.text = "Current password";
                 editSettingsUserDataTableViewCell(cell: cell);
+                cell.txtUserDataValue.delegate = self;
                 return cell;
             }
             else if (indexPath.row == 1)
@@ -131,6 +133,7 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
                 let cell = tableView.dequeueReusableCell(withIdentifier: "IASettingsUserDataTableViewCell", for: indexPath) as! IASettingsUserDataTableViewCell;
                 cell.lblUserDataLabel.text = "New password";
                 editSettingsUserDataTableViewCell(cell: cell);
+                cell.txtUserDataValue.delegate = self;
                 return cell;
             }
             else if (indexPath.row == 2)
@@ -138,6 +141,7 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
                 let cell = tableView.dequeueReusableCell(withIdentifier: "IASettingsUserDataTableViewCell", for: indexPath) as! IASettingsUserDataTableViewCell;
                 cell.lblUserDataLabel.text = "Repeat password";
                 editSettingsUserDataTableViewCell(cell: cell);
+                cell.txtUserDataValue.delegate = self;
                 return cell;
             }
             else
@@ -309,5 +313,10 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
         returnValue = passwordTest.evaluate(with: enteredPassword);
 
         return returnValue;
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder();
+        return true;
     }
 }

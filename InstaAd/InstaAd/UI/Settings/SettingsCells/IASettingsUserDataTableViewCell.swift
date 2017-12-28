@@ -7,13 +7,13 @@
 
 import UIKit
 
-class IASettingsUserDataTableViewCell: UITableViewCell {
+class IASettingsUserDataTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var lblUserDataLabel: UILabel!
     @IBOutlet weak var txtUserDataValue: UITextField!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.txtUserDataValue.delegate = self;
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -21,5 +21,4 @@ class IASettingsUserDataTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
