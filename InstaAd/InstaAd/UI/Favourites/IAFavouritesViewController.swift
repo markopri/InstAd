@@ -81,7 +81,10 @@ class IAFavouritesViewController: UIViewController, UITableViewDelegate, UITable
             cell.lblEventName.text = favouritesEventList[indexPath.section].eventName;
             cell.lblEventPlace.text = favouritesEventList[indexPath.section].eventAddress;
             cell.lblEventDateTime.text = favouritesEventList[indexPath.section].eventStartDate;
-            
+
+            cell.btnShare.tag = indexPath.section;
+            cell.btnShare.addTarget(self, action: #selector(shareButtonClicked(sender:)), for: .touchUpInside);
+
             cell.layer.shadowOffset = CGSize (width: 1, height: 1)
             cell.layer.cornerRadius = 5;
             cell.layer.borderWidth = 3;
@@ -210,5 +213,13 @@ class IAFavouritesViewController: UIViewController, UITableViewDelegate, UITable
                 self.tableView.reloadData()
             }
         });
+    }
+
+    @objc func shareButtonClicked(sender:UIButton){
+        let buttonSection = sender.tag;
+        let activityViewController = UIActivityViewController (activityItems: [self.favouritesEventList[buttonSection].eventUrl ?? "URL is not available"], applicationActivities: nil);
+        activityViewController.popoverPresentationController?.sourceView = self.view;
+        
+        self.present(activityViewController, animated: true, completion: nil);
     }
 }

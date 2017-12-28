@@ -13,6 +13,7 @@ class IAHomeTableViewCell: UITableViewCell {
     @IBOutlet weak var lblEventName: UILabel!
     @IBOutlet weak var lblEventPlace: UILabel!
     @IBOutlet weak var lblEventDateTime: UILabel!
+    @IBOutlet weak var btnShare: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -44,9 +44,15 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DD-Oe-VsK">
+                        <rect key="frame" x="361" y="313" width="32" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" image="instaAd_share.png"/>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="btnShare" destination="4DD-Oe-VsK" id="YaB-Vy-VVa"/>
                 <outlet property="imgEventImage" destination="IHJ-PR-uKz" id="POL-bw-TzI"/>
                 <outlet property="lblEventDateTime" destination="rfE-XP-6gt" id="1xH-eW-vDh"/>
                 <outlet property="lblEventName" destination="jfE-he-B4X" id="MF5-SC-onN"/>
@@ -55,4 +61,7 @@
             <point key="canvasLocation" x="20.5" y="-9"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="instaAd_share.png" width="32" height="32"/>
+    </resources>
 </document>

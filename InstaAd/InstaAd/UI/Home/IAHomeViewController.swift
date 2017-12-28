@@ -68,6 +68,9 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.lblEventPlace.text = eventList[indexPath.section].eventAddress;
         cell.lblEventDateTime.text = eventList[indexPath.section].eventStartDate;
 
+        cell.btnShare.tag = indexPath.section;
+        cell.btnShare.addTarget(self, action: #selector(shareButtonClicked(sender:)), for: .touchUpInside);
+
         cell.layer.shadowOffset = CGSize (width: 1, height: 1)
         cell.layer.cornerRadius = 5;
         cell.layer.borderWidth = 3;
@@ -153,5 +156,13 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 self.tableView.reloadData();
             }
         });
+    }
+
+    @objc func shareButtonClicked(sender:UIButton){
+        let buttonSection = sender.tag;
+        let activityViewController = UIActivityViewController (activityItems: [self.eventList[buttonSection].eventUrl ?? "URL is not available"], applicationActivities: nil);
+        activityViewController.popoverPresentationController?.sourceView = self.view;
+
+        self.present(activityViewController, animated: true, completion: nil);
     }
 }
