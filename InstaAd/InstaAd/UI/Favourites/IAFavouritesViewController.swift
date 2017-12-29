@@ -220,7 +220,7 @@ class IAFavouritesViewController: UIViewController, UITableViewDelegate, UITable
         let buttonSection = sender.tag;
         let activityViewController = UIActivityViewController (activityItems: [self.favouritesEventList[buttonSection].eventUrl ?? "URL is not available"], applicationActivities: nil);
         activityViewController.popoverPresentationController?.sourceView = self.view;
-        
+
         self.present(activityViewController, animated: true, completion: nil);
     }
 }

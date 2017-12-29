@@ -110,7 +110,8 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
             else{
                 let aCell = tableView.dequeueReusableCell(withIdentifier: "IASettingsButtonTableViewCell", for: indexPath) as! IASettingsButtonTableViewCell;
                 aCell.btnSettingsButton.setTitle("Save username", for: UIControlState.normal);
-                aCell.btnSettingsButton.backgroundColor = UIColor .green;
+                aCell.btnSettingsButton.backgroundColor = UIColor (red: 30/255, green: 144/255, blue: 255/255, alpha: 1);
+                aCell.btnSettingsButton.tintColor = UIColor .black;
                 editSettingsButtonTableViewCell(cell: aCell);
 
                 aCell.btnSettingsButton.tag = indexPath.section;
@@ -148,7 +149,8 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
             {
                 let aCell = tableView.dequeueReusableCell(withIdentifier: "IASettingsButtonTableViewCell", for: indexPath) as! IASettingsButtonTableViewCell;
                 aCell.btnSettingsButton.setTitle("Save password", for: UIControlState.normal);
-                aCell.btnSettingsButton.backgroundColor = UIColor .green;
+                aCell.btnSettingsButton.backgroundColor = UIColor (red: 30/255, green: 144/255, blue: 255/255, alpha: 1);
+                aCell.btnSettingsButton.tintColor = UIColor .black;
                 editSettingsButtonTableViewCell(cell: aCell);
 
                 aCell.btnSettingsButton.tag = indexPath.section;
@@ -160,7 +162,8 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
         {
             let aCell = tableView.dequeueReusableCell(withIdentifier: "IASettingsButtonTableViewCell", for: indexPath) as! IASettingsButtonTableViewCell;
             aCell.btnSettingsButton.setTitle("Logout", for: UIControlState.normal);
-            aCell.btnSettingsButton.backgroundColor = UIColor .red;
+            aCell.btnSettingsButton.backgroundColor = UIColor (red: 220/255, green: 20/255, blue: 60/255, alpha: 1);
+            aCell.btnSettingsButton.tintColor = UIColor .black;
             editSettingsButtonTableViewCell(cell: aCell);
 
             aCell.btnSettingsButton.tag = indexPath.section;

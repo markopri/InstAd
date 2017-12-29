@@ -43,7 +43,6 @@ class IADetailsEventMapTableViewCell: UITableViewCell {
         } else {
             // Fallback on earlier versions
         };
-        
     }
 
     override func awakeFromNib() {
