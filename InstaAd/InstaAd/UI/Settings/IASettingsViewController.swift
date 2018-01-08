@@ -23,6 +23,9 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
 
         tableView.register(UINib (nibName: "IASettingsUserDataTableViewCell", bundle: nil), forCellReuseIdentifier: "IASettingsUserDataTableViewCell");
         tableView.register(UINib (nibName: "IASettingsButtonTableViewCell", bundle: nil), forCellReuseIdentifier: "IASettingsButtonTableViewCell");
+
+        NotificationCenter.default.addObserver(self, selector: #selector(IASettingsViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(IASettingsViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -321,5 +324,14 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder();
         return true;
+    }
+
+    @objc func keyboardWillShow(notification: NSNotification) {
+        self.tableView.frame.origin.y -= 200
+ 
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.tableView.frame.origin.y += 200
     }
 }
