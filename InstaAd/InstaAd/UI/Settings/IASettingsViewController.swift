@@ -327,11 +327,15 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     @objc func keyboardWillShow(notification: NSNotification) {
-        self.tableView.frame.origin.y -= 200
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.tableView.frame.origin.y == 0{
+                self.tableView.frame.origin.y -= keyboardSize.height
+            }
+        }
  
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        self.tableView.frame.origin.y += 200
+        self.tableView.frame.origin.y = 0.0;
     }
 }
