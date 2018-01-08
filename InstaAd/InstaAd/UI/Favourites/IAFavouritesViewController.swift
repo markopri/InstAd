@@ -99,12 +99,6 @@ class IAFavouritesViewController: UIViewController, UITableViewDelegate, UITable
             let cell = tableView.dequeueReusableCell(withIdentifier: "IAFavouritesEmptyTableViewCell", for: indexPath) as! IAFavouritesEmptyTableViewCell
             cell.txtFavouritesEmpytDescription.text = "You don't have any favourite place or you're favourite places currently don't have none event!";
 
-            cell.layer.shadowOffset = CGSize (width: 1, height: 1)
-            cell.layer.cornerRadius = 5;
-            cell.layer.borderWidth = 3;
-            let borderColor = UIColor .black;
-            cell.layer.borderColor = borderColor.cgColor;
-
             return cell;
         }
     }

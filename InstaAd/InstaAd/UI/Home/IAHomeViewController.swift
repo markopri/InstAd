@@ -91,9 +91,13 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let pushViewController = IADetailsViewController();
-        pushViewController.eventToDisplay = eventList[indexPath.section];
-        self.navigationController?.pushViewController(pushViewController, animated: true);
+        let user = Auth.auth().currentUser;
+        if (user != nil)
+        {
+            let pushViewController = IADetailsViewController();
+            pushViewController.eventToDisplay = eventList[indexPath.section];
+            self.navigationController?.pushViewController(pushViewController, animated: true);
+        }
     }
 
     //method for fetching values from database
