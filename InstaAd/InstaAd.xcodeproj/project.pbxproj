@@ -28,6 +28,7 @@
 		FF12F1D21FCD6BF8006B04BE /* instaAd_location.png in Resources */ = {isa = PBXBuildFile; fileRef = FF12F1D11FCD6BF8006B04BE /* instaAd_location.png */; };
 		FF1B63E01FF0F87600684C85 /* IAFavouritesEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1B63DE1FF0F87600684C85 /* IAFavouritesEmptyTableViewCell.swift */; };
 		FF1B63E11FF0F87600684C85 /* IAFavouritesEmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF1B63DF1FF0F87600684C85 /* IAFavouritesEmptyTableViewCell.xib */; };
+		FF2B67161FFD0F360061CEF3 /* instaAd_liked_place.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2B67151FFD0F360061CEF3 /* instaAd_liked_place.png */; };
 		FF2FEEB61FC3179400C23A22 /* IASettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2FEEB41FC3179400C23A22 /* IASettingsViewController.swift */; };
 		FF2FEEB71FC3179400C23A22 /* IASettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEB51FC3179400C23A22 /* IASettingsViewController.xib */; };
 		FF2FEEBA1FC31B0A00C23A22 /* instaAd_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */; };
@@ -41,7 +42,6 @@
 		FF32F2891FBCCAD80066F3D1 /* IADetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32F2871FBCCAD80066F3D1 /* IADetailsViewController.xib */; };
 		FF32F28C1FBCCAF30066F3D1 /* IAFavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32F28A1FBCCAF30066F3D1 /* IAFavouritesViewController.swift */; };
 		FF32F28D1FBCCAF30066F3D1 /* IAFavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32F28B1FBCCAF30066F3D1 /* IAFavouritesViewController.xib */; };
-		FF34ADF11FD96542007D4592 /* instaAd_liked_place.png in Resources */ = {isa = PBXBuildFile; fileRef = FF34ADEF1FD96541007D4592 /* instaAd_liked_place.png */; };
 		FF34ADF21FD96542007D4592 /* instaAd_non_liked_place.png in Resources */ = {isa = PBXBuildFile; fileRef = FF34ADF01FD96541007D4592 /* instaAd_non_liked_place.png */; };
 		FF34ADF51FDA85D2007D4592 /* IAPlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34ADF31FDA85D2007D4592 /* IAPlacesTableViewCell.swift */; };
 		FF34ADF61FDA85D2007D4592 /* IAPlacesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF34ADF41FDA85D2007D4592 /* IAPlacesTableViewCell.xib */; };
@@ -89,6 +89,7 @@
 		FF12F1D11FCD6BF8006B04BE /* instaAd_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_location.png; sourceTree = "<group>"; };
 		FF1B63DE1FF0F87600684C85 /* IAFavouritesEmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAFavouritesEmptyTableViewCell.swift; sourceTree = "<group>"; };
 		FF1B63DF1FF0F87600684C85 /* IAFavouritesEmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAFavouritesEmptyTableViewCell.xib; sourceTree = "<group>"; };
+		FF2B67151FFD0F360061CEF3 /* instaAd_liked_place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_liked_place.png; sourceTree = "<group>"; };
 		FF2FEEB41FC3179400C23A22 /* IASettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IASettingsViewController.swift; sourceTree = "<group>"; };
 		FF2FEEB51FC3179400C23A22 /* IASettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IASettingsViewController.xib; sourceTree = "<group>"; };
 		FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_home.png; sourceTree = "<group>"; };
@@ -102,7 +103,6 @@
 		FF32F2871FBCCAD80066F3D1 /* IADetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IADetailsViewController.xib; sourceTree = "<group>"; };
 		FF32F28A1FBCCAF30066F3D1 /* IAFavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAFavouritesViewController.swift; sourceTree = "<group>"; };
 		FF32F28B1FBCCAF30066F3D1 /* IAFavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAFavouritesViewController.xib; sourceTree = "<group>"; };
-		FF34ADEF1FD96541007D4592 /* instaAd_liked_place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_liked_place.png; sourceTree = "<group>"; };
 		FF34ADF01FD96541007D4592 /* instaAd_non_liked_place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_non_liked_place.png; sourceTree = "<group>"; };
 		FF34ADF31FDA85D2007D4592 /* IAPlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPlacesTableViewCell.swift; sourceTree = "<group>"; };
 		FF34ADF41FDA85D2007D4592 /* IAPlacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IAPlacesTableViewCell.xib; sourceTree = "<group>"; };
@@ -215,7 +215,7 @@
 				FF606F791FCC01640043D003 /* instaAd_favourites.png */,
 				FF2FEEB91FC31B0A00C23A22 /* instaAd_home.png */,
 				FF0440EF1FF3A6B300BDCCF7 /* instaAd_home_login.png */,
-				FF34ADEF1FD96541007D4592 /* instaAd_liked_place.png */,
+				FF2B67151FFD0F360061CEF3 /* instaAd_liked_place.png */,
 				FF12F1D11FCD6BF8006B04BE /* instaAd_location.png */,
 				FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */,
 				FF34ADF01FD96541007D4592 /* instaAd_non_liked_place.png */,
@@ -429,7 +429,7 @@
 				FF2FEEBC1FC31C4A00C23A22 /* instaAd_places.png in Resources */,
 				FF0440FB1FF3DE3200BDCCF7 /* IAAbuoutTableViewCell.xib in Resources */,
 				FF0440F01FF3A6B300BDCCF7 /* instaAd_home_login.png in Resources */,
-				FF34ADF11FD96542007D4592 /* instaAd_liked_place.png in Resources */,
+				FF2B67161FFD0F360061CEF3 /* instaAd_liked_place.png in Resources */,
 				FF606F781FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib in Resources */,
 				FF34ADF21FD96542007D4592 /* instaAd_non_liked_place.png in Resources */,
 				FF0440F71FF3DC0600BDCCF7 /* IAAboutViewController.xib in Resources */,
