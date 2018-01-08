@@ -53,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let navigationControllerHome = UINavigationController();
             let homeViewController = IAHomeViewController();
             homeViewController.title = "InstaAd";
+            navigationControllerHome.navigationBar.barTintColor = UIColor .yellow;
             navigationControllerHome.viewControllers = [homeViewController];
             navigationControllerHome.navigationBar.isTranslucent = false;
             navigationControllerHome.tabBarItem = UITabBarItem(title: "Home", image: UIImage (named: "instaAd_home"), selectedImage: nil);
@@ -60,6 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let navigationControllerFavourites = UINavigationController();
             let favouritesViewController = IAFavouritesViewController();
             favouritesViewController.title = "Favourites";
+            navigationControllerFavourites.navigationBar.barTintColor = UIColor .yellow;
             navigationControllerFavourites.viewControllers = [favouritesViewController];
             navigationControllerFavourites.navigationBar.isTranslucent = false;
             navigationControllerFavourites.tabBarItem = UITabBarItem(title: "Favourites", image: UIImage (named: "instaAd_favourites"), selectedImage: nil);
@@ -67,6 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let navigationControllerPlaces = UINavigationController();
             let placesViewController = IAPlacesViewController();
             placesViewController.title = "Places";
+            navigationControllerPlaces.navigationBar.barTintColor = UIColor .yellow;
             navigationControllerPlaces.viewControllers = [placesViewController];
             navigationControllerPlaces.navigationBar.isTranslucent = false;
             navigationControllerPlaces.tabBarItem = UITabBarItem(title: "Places", image: UIImage (named: "instaAd_places"), selectedImage: nil);
@@ -74,6 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let navigationControllerSettings = UINavigationController();
             let settingsViewController = IASettingsViewController();
             settingsViewController.title = "Settings";
+            navigationControllerSettings.navigationBar.barTintColor = UIColor .yellow;
             navigationControllerSettings.viewControllers = [settingsViewController];
             navigationControllerSettings.navigationBar.isTranslucent = false;
             navigationControllerSettings.tabBarItem = UITabBarItem(title: "Settings", image: UIImage (named: "instaAd_settings"), selectedImage: nil);
@@ -81,6 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let navigationControllerAbout = UINavigationController();
             let aboutViewController = IAAboutViewController();
             aboutViewController.title = "About";
+            navigationControllerAbout.navigationBar.barTintColor = UIColor .yellow;
             navigationControllerAbout.viewControllers = [aboutViewController];
             navigationControllerAbout.navigationBar.isTranslucent = false;
             navigationControllerAbout.tabBarItem = UITabBarItem (title: "About", image: UIImage (named: "instaAd_about"), selectedImage: nil);
@@ -88,6 +93,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let tabBar = UITabBarController();
             tabBar.tabBar.isTranslucent = false;
             tabBar.tabBar.barStyle = UIBarStyle.black;
+            tabBar.tabBar.barTintColor = UIColor .black;
+            tabBar.tabBar.tintColor = UIColor.yellow;
             tabBar.viewControllers = [navigationControllerHome, navigationControllerFavourites, navigationControllerPlaces, navigationControllerSettings, navigationControllerAbout];
             window?.rootViewController = tabBar;
         }
@@ -96,6 +103,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let navigationControllerHome = UINavigationController();
             let homeViewController = IAHomeViewController();
             homeViewController.title = "InstaAd";
+            navigationControllerHome.navigationBar.barTintColor = UIColor .yellow;
             navigationControllerHome.viewControllers = [homeViewController];
             navigationControllerHome.navigationBar.isTranslucent = false;
             navigationControllerHome.tabBarItem = UITabBarItem(title: "Home", image: UIImage (named: "instaAd_home"), selectedImage: nil);
@@ -103,6 +111,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let tabBar = UITabBarController();
             tabBar.tabBar.isTranslucent = false;
             tabBar.tabBar.barStyle = UIBarStyle.black;
+            tabBar.tabBar.barTintColor = UIColor .black;
+            tabBar.tabBar.tintColor = UIColor.yellow;
             tabBar.viewControllers = [navigationControllerHome];
             window?.rootViewController = tabBar;
         }

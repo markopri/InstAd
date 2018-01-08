@@ -332,9 +332,9 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
                 self.tableView.frame.origin.y -= keyboardSize.height
             }
         }
- 
+
     }
-    
+
     @objc func keyboardWillHide(notification: NSNotification) {
         self.tableView.frame.origin.y = 0.0;
     }

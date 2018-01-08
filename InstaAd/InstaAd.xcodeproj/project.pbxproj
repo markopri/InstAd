@@ -61,6 +61,7 @@
 		FF606F781FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF606F761FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib */; };
 		FF606F7A1FCC01640043D003 /* instaAd_favourites.png in Resources */ = {isa = PBXBuildFile; fileRef = FF606F791FCC01640043D003 /* instaAd_favourites.png */; };
 		FF65E6011FD6EB6000F7B6BF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65E6001FD6EB6000F7B6BF /* Event.swift */; };
+		FF88B1952003C4ED005DF35A /* instaAd_official_picture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF88B1942003C4ED005DF35A /* instaAd_official_picture.jpg */; };
 		FFC9B6CD1FA2297100B78F9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9B6CC1FA2297100B78F9B /* AppDelegate.swift */; };
 		FFC9B6D61FA2297100B78F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC9B6D51FA2297100B78F9B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -122,6 +123,7 @@
 		FF606F761FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IADetailsEventMapTableViewCell.xib; sourceTree = "<group>"; };
 		FF606F791FCC01640043D003 /* instaAd_favourites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instaAd_favourites.png; sourceTree = "<group>"; };
 		FF65E6001FD6EB6000F7B6BF /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		FF88B1942003C4ED005DF35A /* instaAd_official_picture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = instaAd_official_picture.jpg; sourceTree = "<group>"; };
 		FFC9B6C91FA2297100B78F9B /* InstaAd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaAd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC9B6CC1FA2297100B78F9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC9B6D51FA2297100B78F9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				FF12F1D11FCD6BF8006B04BE /* instaAd_location.png */,
 				FF606F5D1FCAE2A00043D003 /* instaAd_no_image_available.png */,
 				FF34ADF01FD96541007D4592 /* instaAd_non_liked_place.png */,
+				FF88B1942003C4ED005DF35A /* instaAd_official_picture.jpg */,
 				FF2FEEBB1FC31C4A00C23A22 /* instaAd_places.png */,
 				FF2FEEBD1FC31C8300C23A22 /* instaAd_settings.png */,
 				FF48B3C91FF523ED0097547E /* instaAd_share.png */,
@@ -431,6 +434,7 @@
 				FF0440F01FF3A6B300BDCCF7 /* instaAd_home_login.png in Resources */,
 				FF2B67161FFD0F360061CEF3 /* instaAd_liked_place.png in Resources */,
 				FF606F781FCB263C0043D003 /* IADetailsEventMapTableViewCell.xib in Resources */,
+				FF88B1952003C4ED005DF35A /* instaAd_official_picture.jpg in Resources */,
 				FF34ADF21FD96542007D4592 /* instaAd_non_liked_place.png in Resources */,
 				FF0440F71FF3DC0600BDCCF7 /* IAAboutViewController.xib in Resources */,
 				FF34ADF61FDA85D2007D4592 /* IAPlacesTableViewCell.xib in Resources */,

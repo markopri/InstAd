@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class IARegistrationViewController: UIViewController {
+class IARegistrationViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
@@ -17,6 +17,12 @@ class IARegistrationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        txtEmail.delegate = self;
+        txtPassword.delegate = self;
+        txtRepeatPassword.delegate = self;
+
+        NotificationCenter.default.addObserver(self, selector: #selector(IARegistrationViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(IARegistrationViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -142,5 +148,22 @@ class IARegistrationViewController: UIViewController {
         alertController.addAction(okAction);
 
         self.present(alertController, animated: true, completion: nil);
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder();
+        return true;
+    }
+
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.view.frame.origin.y = 0.0;
     }
 }
