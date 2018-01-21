@@ -9,15 +9,20 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var databaseReference : DatabaseReference!
     var eventList = [Event]()
+    var filteredEventList = [Event]()
+    var isSearching = false
 
     override func viewDidLoad() {
         super.viewDidLoad();
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none;
+        searchBar.delegate = self;
+        searchBar.returnKeyType = UIReturnKeyType.done;
         databaseReference = Database.database().reference();
 
         fetchEvents();
@@ -52,22 +57,43 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
+        if (isSearching)
+        {
+            return filteredEventList.count;
+        }
+
         return eventList.count;
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "IAHomeTableViewCell", for: indexPath) as! IAHomeTableViewCell
 
-        if let url = NSURL(string: eventList[indexPath.section].eventImage!)
+        if (isSearching)
         {
-            if let data = try? Data (contentsOf: url as URL)
+            if let url = NSURL(string: filteredEventList[indexPath.section].eventImage!)
             {
-                cell.imgEventImage.image = UIImage(data: data)
+                if let data = try? Data (contentsOf: url as URL)
+                {
+                    cell.imgEventImage.image = UIImage(data: data)
+                }
             }
+            cell.lblEventName.text = filteredEventList[indexPath.section].eventName;
+            cell.lblEventPlace.text = filteredEventList[indexPath.section].eventAddress;
+            cell.lblEventDateTime.text = filteredEventList[indexPath.section].eventStartDate;
         }
-        cell.lblEventName.text = eventList[indexPath.section].eventName;
-        cell.lblEventPlace.text = eventList[indexPath.section].eventAddress;
-        cell.lblEventDateTime.text = eventList[indexPath.section].eventStartDate;
+        else
+        {
+            if let url = NSURL(string: eventList[indexPath.section].eventImage!)
+            {
+                if let data = try? Data (contentsOf: url as URL)
+                {
+                    cell.imgEventImage.image = UIImage(data: data)
+                }
+            }
+            cell.lblEventName.text = eventList[indexPath.section].eventName;
+            cell.lblEventPlace.text = eventList[indexPath.section].eventAddress;
+            cell.lblEventDateTime.text = eventList[indexPath.section].eventStartDate;
+        }
 
         cell.btnShare.tag = indexPath.section;
         cell.btnShare.addTarget(self, action: #selector(shareButtonClicked(sender:)), for: .touchUpInside);
@@ -169,5 +195,30 @@ class IAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         activityViewController.popoverPresentationController?.sourceView = self.view;
 
         self.present(activityViewController, animated: true, completion: nil);
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if (searchBar.text == nil || searchBar.text == "")
+        {
+            isSearching = false;
+            view.endEditing(true);
+            tableView.reloadData();
+        }
+        else
+        {
+            isSearching = true;
+            self.filteredEventList.removeAll();
+
+            for selectEvent in self.eventList
+            {
+                if ((selectEvent.eventName?.lowercased().range(of: searchBar.text!.lowercased())) != nil)
+                {
+                    self.filteredEventList.append(selectEvent);
+                }
+                NSLog(selectEvent.eventName!.lowercased());
+            }
+
+            tableView.reloadData();
+        }
     }
 }
