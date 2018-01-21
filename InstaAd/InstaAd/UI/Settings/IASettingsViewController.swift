@@ -293,12 +293,16 @@ class IASettingsViewController: UIViewController, UITableViewDelegate, UITableVi
     //method for fetching values from database
     func fetchEvents() -> Void {
         let user = Auth.auth().currentUser;
-        databaseReference = Database.database().reference();
-        databaseReference = databaseReference.child("users").child((user?.uid)!).child("name");
+        guard let userID = user?.uid else { return }
+        
+        databaseReference = Database.database().reference()
+        databaseReference = databaseReference.child("users").child(userID).child("name")
 
         databaseReference.observe(.value, with: { (snapshot) in
-            self.databaseUserName = (snapshot.value as? String)!;
-            self.tableView.reloadData();
+            if let value = snapshot.value as? String {
+                self.databaseUserName = value
+                self.tableView.reloadData()
+            }
         });
     }
 
