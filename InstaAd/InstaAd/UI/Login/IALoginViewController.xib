@@ -21,8 +21,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GD5-cG-qrI">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GD5-cG-qrI">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Jg-O5-aT8">
                             <rect key="frame" x="72" y="315" width="231" height="30"/>
@@ -36,7 +37,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uib-ef-Be2">
                             <rect key="frame" x="235" y="408" width="68" height="30"/>
@@ -45,6 +46,9 @@
                             <state key="normal" title="Skip">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="btnSkip:" destination="-1" eventType="touchUpInside" id="uwU-uc-zCB"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qD-RS-1ig">
                             <rect key="frame" x="112" y="476" width="150" height="30"/>
@@ -73,12 +77,6 @@
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="GD5-cG-qrI" secondAttribute="bottom" id="cSo-L1-XRb"/>
-                <constraint firstAttribute="trailing" secondItem="GD5-cG-qrI" secondAttribute="trailing" id="fjY-2h-WYg"/>
-                <constraint firstItem="GD5-cG-qrI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="veZ-fS-gB8"/>
-                <constraint firstItem="GD5-cG-qrI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="y7E-v8-CrB"/>
-            </constraints>
             <point key="canvasLocation" x="34.5" y="53.5"/>
         </view>
     </objects>

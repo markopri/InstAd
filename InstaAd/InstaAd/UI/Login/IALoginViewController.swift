@@ -13,6 +13,15 @@ class IALoginViewController: UIViewController {
     @IBOutlet var txtUsername: UITextField!
     @IBOutlet var txtPassword: UITextField!
     
+    let appDelegate = AppDelegate()
+    
+    @IBAction func btnSkip(_ sender: Any) {
+        
+        self.appDelegate.showNavigation(action: "skip")
+        
+    }
+    
+    
     @IBAction func btnLogin(_ sender: Any) {
         
         if (txtUsername.text?.isEmpty)!||(txtPassword.text?.isEmpty)!{
@@ -25,14 +34,18 @@ class IALoginViewController: UIViewController {
                 
                 if error == nil {
                     //TODO - izbriši nakon redirekcije na stranicu početnu
-                    let alertController = UIAlertController(title: "Login good", message: error?.localizedDescription, preferredStyle: .alert)
+                    //let alertController = UIAlertController(title: "Login good", message: error?.localizedDescription, preferredStyle: .alert)
                     
-                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(defaultAction)
+                    //let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    //alertController.addAction(defaultAction)
                     
-                    self.present(alertController, animated: true, completion: nil)
+                    //self.present(alertController, animated: true, completion: nil)
                     //TODO - otkomentiraj kad ce bit prebacivanje na glavnu stranicu
                     //Go to the HomeViewController if the login is sucessful
+                    
+                    
+                    self.appDelegate.showNavigation(action: "svejedno")
+
                     //let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
                     //self.present(vc!, animated: true, completion: nil)
                     
