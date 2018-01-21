@@ -65,13 +65,11 @@
                                 <action selector="btnLogin:" destination="-1" eventType="touchUpInside" id="NTX-kJ-kNj"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="instaAd_official_picture.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="s2O-I4-qhS">
-                            <rect key="frame" x="72" y="53" width="231" height="229"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instaAd_official_picture.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3CP-3t-tYK">
+                            <rect key="frame" x="72" y="57" width="235" height="228"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                     </subviews>
-                    <constraints>
-                        <constraint firstItem="s2O-I4-qhS" firstAttribute="top" secondItem="GD5-cG-qrI" secondAttribute="top" constant="51" id="d0i-st-yYl"/>
-                    </constraints>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
