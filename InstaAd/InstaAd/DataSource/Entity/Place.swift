@@ -15,5 +15,6 @@ class Place: NSObject {
     var placeLat : String?
     var placeLong : String?
     var placePicture : String?
+    var placeFavorite : Bool?
     
 }

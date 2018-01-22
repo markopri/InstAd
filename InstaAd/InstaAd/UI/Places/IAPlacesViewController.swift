@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class IAPlacesViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
    
@@ -14,11 +15,13 @@ class IAPlacesViewController: UIViewController,UITableViewDelegate, UITableViewD
     @IBOutlet var placesViewTable: UITableView!
     var databaseReference : DatabaseReference!
     var placesList = [Place]()
+    var placesFavsList = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         databaseReference = Database.database().reference();
-        fetchPlaces()
+        fetchFavs()
+        
         self.placesViewTable.reloadData()
         
         placesViewTable.register(UINib (nibName: "IAPlacesTableViewCell", bundle: nil), forCellReuseIdentifier: "IAPlacesTableViewCell");
@@ -41,7 +44,7 @@ class IAPlacesViewController: UIViewController,UITableViewDelegate, UITableViewD
         
         cell.tableViewLabel.text = placesList[indexPath.row].placeName
         
-        if(indexPath.row%3==0){
+        if(placesList[indexPath.row].placeFavorite)!{
             cell.tableViewBtn.setBackgroundImage(UIImage (named: "instaAd_liked_place"), for: .normal)
         }else{
             cell.tableViewBtn.setBackgroundImage(UIImage (named: "instaAd_non_liked_place"), for: .normal)
@@ -52,8 +55,31 @@ class IAPlacesViewController: UIViewController,UITableViewDelegate, UITableViewD
         return cell;
     }
     
+    func fetchFavs() -> Void {
+        let userID = Auth.auth().currentUser?.uid
+        let databaseReferenceFav = databaseReference.child("users").child(userID!).child("favs")
+        
+        databaseReferenceFav.observe(.value, with: { (snapshot) in
+            
+            if (snapshot.childrenCount > 0)
+            {
+                for places in snapshot.children.allObjects as! [DataSnapshot]
+                {
+                    var placeName = ""
+                    placeName = places.key as String
+                    self.placesFavsList.append(placeName)
+                    
+                }
+                self.fetchPlaces()
+            }
+        });
+        
+    }
+    
     func fetchPlaces() -> Void {
         databaseReference = databaseReference.child("lokacije");
+        
+        
         databaseReference.observe(.value, with: { (snapshot) in
             
             if (snapshot.childrenCount > 0)
@@ -70,23 +96,26 @@ class IAPlacesViewController: UIViewController,UITableViewDelegate, UITableViewD
                     place.placeLat = placeObject["latitude"] as? String
                     place.placeLong = placeObject["longitude"] as? String
                     
+                    var isFavorite = false
+                    
+                    for selectedFav in self.placesFavsList{
+                        
+                        if(selectedFav == place.placeName){
+                            
+                            isFavorite = true
+                        }
+                    }
+                    
+                    place.placeFavorite = isFavorite
+                    
                     self.placesList.append(place)
                     self.placesViewTable.reloadData()
                     
                 }
             }
         });
+       self.placesViewTable.reloadData()
     }
-    
-    func isFavorite() -> Bool {
-        return true
-    }
-    
-    
-    
-    
-
-    
 
     /*
     // MARK: - Navigation
