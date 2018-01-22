@@ -119,31 +119,29 @@ class IAPlacesViewController: UIViewController,UITableViewDelegate, UITableViewD
         });
        self.placesViewTable.reloadData()
     }
-    // todo ispod - treba dohvatit određeno mjesto i ako je favorit - ako nije -
+
     @objc func likeButtonClicked (sender: UIButton){
-        let userID = Auth.auth().currentUser?.uid
-        let databaseReferenceFav = databaseReference.child("users").child(userID!).child("favs")
-        
-        //databaseReferenceFav.
-        if(self.placesList[sender.tag].placeFavorite)!{
-            self.placesList[sender.tag].placeFavorite = false
-            //todo - nefavorit, makni iz baze i maknut sliku, i mora bit ovo placeFav = false
-        }else{
-            //ako je nefavorit , onda dodat da je plaveFav = true, metknut sliku i zapisat to u bazu
-            //databaseReferenceFav.setValue(["favs" : true])
+        let buttonRow = sender.tag;
+        let user = Auth.auth().currentUser;
+        if (self.placesList[buttonRow].placeFavorite)!
+        {
+            self.placesList[buttonRow].placeFavorite = false;
+            var databaseRefernece : DatabaseReference!;
+            databaseRefernece = Database.database().reference();
 
+            let userDatabaseReference = databaseRefernece.child("users").child((user?.uid)!).child("favs").child(self.placesList[buttonRow].placeName!);
+            userDatabaseReference.removeValue();
+            self.placesViewTable.reloadData();
         }
-        self.placesViewTable.reloadData()
+        else
+        {
+            self.placesList[buttonRow].placeFavorite = true;
+            var databaseRefernece : DatabaseReference!;
+            databaseRefernece = Database.database().reference();
+
+            let userDatabaseReference = databaseRefernece.child("users").child((user?.uid)!).child("favs").child(self.placesList[buttonRow].placeName!);
+            userDatabaseReference.setValue("dodan");
+            self.placesViewTable.reloadData();
+        }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

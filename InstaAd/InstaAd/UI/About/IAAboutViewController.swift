@@ -64,7 +64,7 @@ class IAAboutViewController: UIViewController, UITableViewDelegate, UITableViewD
             else if (indexPath.row == 1)
             {
                 cell.lblAboutTitle.text = "Released";
-                cell.txtAboutDescription.text = "2017-12-27";
+                cell.txtAboutDescription.text = "2018-01-22";
             }
             else
             {
