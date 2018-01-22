@@ -44,6 +44,9 @@ class IAPlacesViewController: UIViewController,UITableViewDelegate, UITableViewD
         
         cell.tableViewLabel.text = placesList[indexPath.row].placeName
         
+        cell.tableViewBtn.tag = indexPath.row
+        cell.tableViewBtn.addTarget(self, action: #selector(likeButtonClicked(sender: )), for: .touchUpInside)
+        
         if(placesList[indexPath.row].placeFavorite)!{
             cell.tableViewBtn.setBackgroundImage(UIImage (named: "instaAd_liked_place"), for: .normal)
         }else{
@@ -115,6 +118,22 @@ class IAPlacesViewController: UIViewController,UITableViewDelegate, UITableViewD
             }
         });
        self.placesViewTable.reloadData()
+    }
+    // todo ispod - treba dohvatit određeno mjesto i ako je favorit - ako nije -
+    @objc func likeButtonClicked (sender: UIButton){
+        let userID = Auth.auth().currentUser?.uid
+        let databaseReferenceFav = databaseReference.child("users").child(userID!).child("favs")
+        
+        //databaseReferenceFav.
+        if(self.placesList[sender.tag].placeFavorite)!{
+            self.placesList[sender.tag].placeFavorite = false
+            //todo - nefavorit, makni iz baze i maknut sliku, i mora bit ovo placeFav = false
+        }else{
+            //ako je nefavorit , onda dodat da je plaveFav = true, metknut sliku i zapisat to u bazu
+            //databaseReferenceFav.setValue(["favs" : true])
+
+        }
+        self.placesViewTable.reloadData()
     }
 
     /*
